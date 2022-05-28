@@ -64,5 +64,3 @@ css部分
 ```
 
 ## 结果展示
-
-{% codepen copurxia bGVZBKL light  [result  [100]] %}

@@ -12,7 +12,7 @@ const config: UserConfig<ThemeUserConfig> = {
     name: '乐得自在',
   },
   description: '闲来无事的小本本.',
-  
+  url:"copur.xyz",
   social: [
     {
       name: 'RSS',
