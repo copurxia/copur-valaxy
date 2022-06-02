@@ -17,6 +17,8 @@ categories: ["服务配置"]
 
 原本参考使用的是[RDPWrap](https://github.com/stascorp/rdpwrap)，但因为RDPWrap已经年久失修，且无法及时适配新版版本，使用面有限
 
+<!-- more -->
+
 SuperRDP2主要功能
 
 1. 拉去线上最新配置信息，自动重装
