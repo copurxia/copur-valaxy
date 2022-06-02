@@ -103,5 +103,116 @@ SuperRDP2主要功能
 
 ### IPv4配置
 
-出现问题，等待解决
+因为本来就有一台服务器（内网穿透软件好贵😭），考虑之后使用自建[frp](https://github.com/fatedier/frp)
+
+服务端使用Linux
+
+```bash
+wget https://github.com/fatedier/frp/releases/download/v0.43.0/frp_0.43.0_linux_amd64.tar.gz
+tar -zxvf frp_0.43.0_linux_amd64.tar.gz
+cd frp_0.43.0_linux_amd64/
+mkdir -p /etc/frp
+mv *.ini /etc/frp
+mv frpc frps /usr/bin
+```
+
+新建`/usr/lib/systemd/system/frps.service:`
+
+```ini
+[Unit]
+Description=Frp Server Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/frps -c /etc/frp/frps.ini
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+systemctl enable frps
+systemctl start frps
+```
+
+> 安全组需要同时放行7000和4433端口
+
+客户端使用windows
+
+下载并解压frp
+
+frpc.ini
+
+```ini
+[common]
+server_addr = 42.192.48.40
+server_port = 7000
+
+[rdp]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 3389
+remote_port = 4433
+
+[rdp_udp]
+type = udp
+local_ip = 127.0.0.1
+local_port = 3389
+remote_port = 4433
+```
+
+测试无碍后
+
+使用[winsw](https://github.com/winsw/winsw)将frp作为服务启动
+
+frpc.xml
+
+```xml
+<service>
+    <id>frp</id>
+    <name>frp</name>
+    <description>frpc rdp服务</description>
+    <executable>frpc</executable>
+    <arguments>-c frpc.ini</arguments>
+    <logmode>reset</logmode>
+</service>
+```
+
+将`winsw.exe`、`frpc.xml`、`frpc.exe`、`frpc.ini`置于同一目录下
+
+```powershell
+.\winsw install frpc.xml
+```
+
+运行`services.msc`即可看到相关服务，可以进行登录账号等设置
+
+> 如果出现rdp无法连接的情况，请检查rdp服务是否仍在正常运行
+
+## 端口修改
+
+> 修改端口后需要同时修改上面的frp服务配置
+
+可在`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`处找到端口并修改
+
+运行以下命令查看当前端口
+
+```powershell
+Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
+```
+
+运行以下命令将端口修改为4433
+
+```powershell
+$portvalue = 4433
+
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value $portvalue 
+
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-TCP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $portvalue 
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-UDP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol UDP -LocalPort $portvalue
+```
 
