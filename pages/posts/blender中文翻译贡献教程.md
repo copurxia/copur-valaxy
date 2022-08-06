@@ -14,12 +14,13 @@ categories: ["教程"]
 主要内容参考[blender docs](https://docs.blender.org/manual/zh-hans/3.4/contribute/index.html)以及[blender cn 老教程](https://www.jianshu.com/p/b1a48105e05c)
 
 本教程主要针对Windows下，Mac&Linux平台建议参考官方文档
+<!-- more -->
 
 ## 安装依赖软件
 
 `blender docs`依赖Python进行文档编译以及SVN进行版本管理，故需先安装这两个程序
 
-###　安装Python
+### 安装Python
 
 可先前往[官方下载](https://www.python.org/downloads/)页面下载Python
 
