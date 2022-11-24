@@ -21,7 +21,7 @@ import 3dm插件基于rhino3dm模块
 
 但由于blender的颠覆式更新，该插件的更新速度无法追上blender官方的速度
 
-​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8Wh6SV6flEv2YCGIvKh7lgJIdFmfkJg3CLSK6Y6iqAxq1ytO9U3.da7M*a.4*rXyIMAF3Vb4*ErHs5oayRkJH.VI!/b=&bo=KgVMBCoFTAQRHyg!&ek=1&tl=1&tm=1668475329)        我甚至无法正常启用了
+![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8Wh6SV6flEv2YCGIvKh7lgJIdFmfkJg3CLSK6Y6iqAxq1ytO9U3.da7M*a.4*rXyIMAF3Vb4*ErHs5oayRkJH.VI!/b=&bo=KgVMBCoFTAQRHyg!&ek=1&tl=1&tm=1668475329)        我甚至无法正常启用了
 
 就以前使用体验来看，该插件可以直接读取3dm文件，因此在导入文件时可以选择导入具体的图层和物件，但布线极其混乱，甚至难以区分不同的面，会对后续流程产生影响，故此放弃。
 
@@ -35,9 +35,9 @@ import 3dm插件基于rhino3dm模块
 
 同时因为尺寸问题，可能需要不同程度的缩放，可以在导入时进行选择
 
-​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WkHlNWAel.lhWnegSN4NlufKVS0R1am6Aa4qeTmUkRbR5XFmYV3mI6IVmGfx7brYdSYhonDzJA4C7JWF6xLyQ6s!/b=&bo=5AHOA.QBzgMRHyg!&ek=1&tl=1&tm=1668475329)        keyshot导出fbx的朝向与blender相同，如果是其他软件可能需要手动指定轴方向（万年老问题了
+​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WkHlNWAel.lhWnegSN4NlufKVS0R1am6Aa4qeTmUkRbR5XFmYV3mI6IVmGfx7brYdSYhonDzJA4C7JWF6xLyQ6s!/b=&bo=5AHOA.QBzgMRHyg!&ek=1&tl=1&tm=1668475329)
 
-​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WuV5*IJcD8Z*jPtt5iB6kZTj42zVw1FigjS*j4*weG8tjrlvZp6FhO7gGL0Ic1a80dXj7q77YeVFYyHDQAZCLKw!/b=&bo=zAYEBcwGBAURHyg!&ek=1&tl=1&tm=1668475329)        同时也可以看到，该方案导入的布线同样不是很符合我们期望（但至少能用
+keyshot导出fbx的朝向与blender相同，如果是其他软件可能需要手动指定轴方向（万年老问题了![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WuV5*IJcD8Z*jPtt5iB6kZTj42zVw1FigjS*j4*weG8tjrlvZp6FhO7gGL0Ic1a80dXj7q77YeVFYyHDQAZCLKw!/b=&bo=zAYEBcwGBAURHyg!&ek=1&tl=1&tm=1668475329)        同时也可以看到，该方案导入的布线同样不是很符合我们期望（但至少能用
 
 因此可能需要重拓扑，不过作为单纯的渲染是已经符合需求了
 
@@ -45,15 +45,13 @@ import 3dm插件基于rhino3dm模块
 
 注意better_fbx的导入缩放基本正确，如果需要手动缩放和官方fbx导入有所不同
 
-​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WgE1D4aoPK4teXt0xROqkgkhVs5wcwwpusEr1yAIxX2QQPtFZeawWyCqlHSc.7HJ7m6WUULLgacBzos8OriF3Ns!/b=&bo=zAEcBMwBHAQRHyg!&ek=1&tl=1&tm=1668475329)                         ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WihDnEw7V16ooaororAhOz7Zkc3ELow5RUlYKc6o4xRViTU9Xh1vFEC30kgige6veM8sHLCRHAu54qbitESUHhk!/b=&bo=zAH.A8wB*gMRHyg!&ek=1&tl=1&tm=1668475329)        **此外可能的方案**
+​                 ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WgE1D4aoPK4teXt0xROqkgkhVs5wcwwpusEr1yAIxX2QQPtFZeawWyCqlHSc.7HJ7m6WUULLgacBzos8OriF3Ns!/b=&bo=zAEcBMwBHAQRHyg!&ek=1&tl=1&tm=1668475329)                         ![img](http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WihDnEw7V16ooaororAhOz7Zkc3ELow5RUlYKc6o4xRViTU9Xh1vFEC30kgige6veM8sHLCRHAu54qbitESUHhk!/b=&bo=zAH.A8wB*gMRHyg!&ek=1&tl=1&tm=1668475329)
 
-在rhino中使用subd进行构建，并且在导出时压边（我未曾使用但是有群友推荐
+**此外可能的方案**
 
+- 在rhino中使用subd进行构建，并且在导出时压边（我未曾使用但是有群友推荐
 
-
-在rhino中使用细分工具的转四边面操作，直接曲面转换和转网格转换是两种不同的效果，然后使用硬表面插件自动锐化处理发现和分UV
-
-
+- 在rhino中使用细分工具的转四边面操作，直接曲面转换和转网格转换是两种不同的效果，然后使用硬表面插件自动锐化处理发现和分UV
 
 其实就各种方案而言，跨blender工作流都不是很完美，当然这也是blender的重要问题之一
 
