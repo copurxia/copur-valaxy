@@ -11,8 +11,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "patch-package": "^6.4.7",
-    "valaxy": "0.3.9",
-    "valaxy-theme-yun": "0.3.9"
+    "patch-package": "^6.5.0",
+    "valaxy": "0.11.2",
+    "valaxy-theme-yun": "0.11.2"
   }
 }
