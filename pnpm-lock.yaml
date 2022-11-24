@@ -3,11 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   patch-package: ^6.5.0
   valaxy: 0.11.2
+  valaxy-addon-waline: ^0.0.3
   valaxy-theme-yun: 0.11.2
 
 dependencies:
   patch-package: 6.5.0
   valaxy: 0.11.2
+  valaxy-addon-waline: 0.0.3
   valaxy-theme-yun: 0.11.2
 
 packages:
@@ -3109,6 +3111,14 @@ packages:
 
   /valaxy-addon-waline/0.0.2:
     resolution: {integrity: sha512-1rc2fW6sOh7XHqzR/QTry+i6KbbXI1hgtzwbsEZSdJtV0g/oE5xbqNnHnN6zfl62FDczj2705/qCC4h0Hvg8zA==}
+    dependencies:
+      '@waline/client': 2.14.1
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
+
+  /valaxy-addon-waline/0.0.3:
+    resolution: {integrity: sha512-YBlkawzt8mLqcCYrmCWH8PPTyzjWbZAkT6or/HqXRcpiBmN+f2SwK8TL0uoAx2lMqU2vuZyTsZXebi6K/SFvmw==}
     dependencies:
       '@waline/client': 2.14.1
     transitivePeerDependencies:
