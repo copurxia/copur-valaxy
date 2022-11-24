@@ -1,0 +1,1 @@
+import{d as o,q as e,o as t,c,C as p}from"./app.73867fb2.js";const s=o({__name:"[page]",props:{page:null},setup(a){return(r,_)=>{const n=p;return t(),c(n,{"cur-page":parseInt(a.page)},null,8,["cur-page"])}}});typeof e=="function"&&e(s);export{s as default};

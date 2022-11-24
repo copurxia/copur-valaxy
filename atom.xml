@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>copur.xyz/</id>
+    <title>乐得自在的小破站</title>
+    <updated>2022-11-24T02:00:34.893Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>乐得自在</name>
+        <email>me@yunyoujun.cn</email>
+        <uri>https://www.yunyoujun.cn</uri>
+    </author>
+    <link rel="alternate" href="copur.xyz/"/>
+    <link rel="self" href="copur.xyz/feed.atom"/>
+    <subtitle>闲来无事的小本本.</subtitle>
+    <logo>https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-with-bg.jpg</logo>
+    <icon>copur.xyz/favicon.png</icon>
+    <rights>CC BY-NC-SA 4.0 2022 © 乐得自在</rights>
+    <entry>
+        <title type="html"><![CDATA[rhino→blender流程的几种可能性]]></title>
+        <id>copur.xyz/posts/rhino2blender</id>
+        <link href="copur.xyz/posts/rhino2blender"/>
+        <updated>2022-11-15T09:12:28.000Z</updated>
+        <content type="html"><![CDATA[<p>由于专业需求会更多的走这个流程，故此研究</p>
+<p>当然由于两者的构建思维基本不同，最好的方案还是直接在blender内重建一次，倘若有动画之类的需求</p>
+<!-- more -->
+<p><strong>Import 3dm插件</strong></p>
+<p>插件地址：</p>
+<p><a href="https://github.com/jesterKing/import_3dm">https://github.com/jesterKing/import_3dm</a></p>
+<p>import 3dm插件基于rhino3dm模块</p>
+<p>但由于blender的颠覆式更新，该插件的更新速度无法追上blender官方的速度</p>
+<p><img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8Wh6SV6flEv2YCGIvKh7lgJIdFmfkJg3CLSK6Y6iqAxq1ytO9U3.da7M*a.4*rXyIMAF3Vb4*ErHs5oayRkJH.VI!/b=&amp;bo=KgVMBCoFTAQRHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img">        我甚至无法正常启用了</p>
+<p>就以前使用体验来看，该插件可以直接读取3dm文件，因此在导入文件时可以选择导入具体的图层和物件，但布线极其混乱，甚至难以区分不同的面，会对后续流程产生影响，故此放弃。</p>
+<p><strong>rhino→keyshot→fbx流程</strong></p>
+<p>由于keyshot的高兼容性，借由keyshot作为中间过程，由keyshot导出fbx文件再导入blender低较为实用的一种方法。</p>
+<p>不过导入时会同步导入keyshot相机。</p>
+<p>​                 <img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WoYRjuvqQ4vFCV.Edz8RWrMJg*.7u4Mlgra4WQ1oaUPrU9.3IeYposrirJ7yKdZprDExFD0aFaysHk6*DXg.G8I!/b=&amp;bo=CALQAQgC0AERHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img">        为避免破坏场景，建议在新的集合内导入。</p>
+<p>同时因为尺寸问题，可能需要不同程度的缩放，可以在导入时进行选择</p>
+<p>​                 <img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WkHlNWAel.lhWnegSN4NlufKVS0R1am6Aa4qeTmUkRbR5XFmYV3mI6IVmGfx7brYdSYhonDzJA4C7JWF6xLyQ6s!/b=&amp;bo=5AHOA.QBzgMRHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img"></p>
+<p>keyshot导出fbx的朝向与blender相同，如果是其他软件可能需要手动指定轴方向（万年老问题了<img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WuV5*IJcD8Z*jPtt5iB6kZTj42zVw1FigjS*j4*weG8tjrlvZp6FhO7gGL0Ic1a80dXj7q77YeVFYyHDQAZCLKw!/b=&amp;bo=zAYEBcwGBAURHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img">        同时也可以看到，该方案导入的布线同样不是很符合我们期望（但至少能用</p>
+<p>因此可能需要重拓扑，不过作为单纯的渲染是已经符合需求了</p>
+<p>此外还可以通过better_fbx插件来获取更多的导入时选项</p>
+<p>注意better_fbx的导入缩放基本正确，如果需要手动缩放和官方fbx导入有所不同</p>
+<p>​                 <img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WgE1D4aoPK4teXt0xROqkgkhVs5wcwwpusEr1yAIxX2QQPtFZeawWyCqlHSc.7HJ7m6WUULLgacBzos8OriF3Ns!/b=&amp;bo=zAEcBMwBHAQRHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img">                         <img src="http://world.qpic.cn/psc?/world/O0cFsaTfOlqjIAnYAvw8WihDnEw7V16ooaororAhOz7Zkc3ELow5RUlYKc6o4xRViTU9Xh1vFEC30kgige6veM8sHLCRHAu54qbitESUHhk!/b=&amp;bo=zAH.A8wB*gMRHyg!&amp;ek=1&amp;tl=1&amp;tm=1668475329" alt="img"></p>
+<p><strong>此外可能的方案</strong></p>
+<ul>
+<li>
+<p>在rhino中使用subd进行构建，并且在导出时压边（我未曾使用但是有群友推荐</p>
+</li>
+<li>
+<p>在rhino中使用细分工具的转四边面操作，直接曲面转换和转网格转换是两种不同的效果，然后使用硬表面插件自动锐化处理发现和分UV</p>
+</li>
+</ul>
+<p>其实就各种方案而言，跨blender工作流都不是很完美，当然这也是blender的重要问题之一</p>
+<p>不过根据之前的消息，**Blender基金会决定收回之前停止在Blender 中使用VFX参考平台的决定。**或许在未来blender与其他软件的衔接流程能有所改善吧，激进了那么久了，确实也该缓一缓了。</p>
+<p>不过个人认为，Python也应当为这种负责，python在进行着同样的颠覆式更新，而Python作为blender插件以及blender编程的主要语言，或多或少影响到了blender，blender插件的作者们一次次地去追官方版本更新，有的最终放弃只维护LTS版本，而作为主要的生产衔接，VFX参考平台会首先考虑稳定性问题，两者相互矛盾，这也是之前blender想要放弃支持VFX的原因（然后给骂惨了</p>
+<p>按照之前的安排，2023第三季度会有完全支持VFX决定的审查（好拖</p>
+<p>之后blender的渲染器生态以及衔接或许都会得到改善吧</p>
+<p>另外新版的blender同样可以选择python3.9而非3.10进行构建（不过非官方的构建版本有可能会出现问题</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2022-11-15T09:12:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[blender中文翻译贡献教程]]></title>
+        <id>copur.xyz/posts/blender-doc-translation</id>
+        <link href="copur.xyz/posts/blender-doc-translation"/>
+        <updated>2022-08-06T10:55:28.000Z</updated>
+        <content type="html"><![CDATA[<h1>blender中文翻译贡献教程</h1>
+<h2>前言</h2>
+<p>因为blender cn社区的老教程已经过时许久，可能会导致不少问题，故此写一份新的版本</p>
+<p>主要内容参考<a href="https://docs.blender.org/manual/zh-hans/3.4/contribute/index.html">blender docs</a>以及<a href="https://www.jianshu.com/p/b1a48105e05c">blender cn 老教程</a></p>
+<p>本教程主要针对Windows下，Mac&amp;Linux平台建议参考官方文档</p>
+<!-- more -->
+<h2>安装依赖软件</h2>
+<p><code>blender docs</code>依赖Python进行文档编译以及SVN进行版本管理，故需先安装这两个程序</p>
+<h3>安装Python</h3>
+<p>可先前往<a href="https://www.python.org/downloads/">官方下载</a>页面下载Python</p>
+<p>本人使用的是3.10.6版本，记得勾选<code>Add to Path</code></p>
+<p><img src="../../public/image/image-20220806093154850.png" alt="image-20220806093154850"></p>
+<h3>安装SVN</h3>
+<p>SVN管理，官方建议Windows下使用的是<a href="https://tortoisesvn.net/downloads.html">TortoiseSVN</a></p>
+<p>选择对应系统版本的下载即可</p>
+<p><img src="../../public/image/image-20220806093435405.png" alt="image-20220806093435405"></p>
+<p>最好勾选<code>Command line client tools</code>，会在后续较为方便使用</p>
+<h3>下载文档源码</h3>
+<p>安装完成后新建一个空文件夹，推荐命名为<code>blender_docs</code></p>
+<p>随后在此处右键，点击checkout..</p>
+<p><img src="../../public/image/image-20220806094118045.png" alt="image-20220806094118045"></p>
+<p>在URL of repository中填入<code>https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs</code></p>
+<p>Checkout of directory中理论上就是刚才新建的空文件夹，直接点击ok即可，等待一杯咖啡的时间</p>
+<p>倘若速度较慢可以在TortoiseSVN设置 -&gt; Network中启用代理，在此不多做解释</p>
+<p><img src="../../public/image/image-20220806094217813.png" alt="image-20220806094217813"></p>
+<p>下载完毕后，进入刚才的文件夹右键打开终端（也有可能需要按住<code>Shift</code>键再右键）</p>
+<p>输入<code>pip install -r requirements.txt</code>并回车执行安装所需依赖</p>
+<p>倘若一切顺利便会显示</p>
+<pre><code class="language-bash">Successfully installed Jinja2 MarkupSafe Pygments Sphinx docutils sphinx-rtd-theme Cleaning up...`
+</code></pre>
+<p>因为笔者已经安装完成故没有截图</p>
+<p>时不时运行</p>
+<pre><code class="language-bash">pip install -r requirements.txt --upgrade
+</code></pre>
+<p>确保依赖为最新</p>
+<p>不要关闭终端，后续还需使用</p>
+<h2>下载中文翻译&amp;编译文档</h2>
+<h3>编译文档</h3>
+<p>在刚才的命令行窗口内输入</p>
+<pre><code class="language-powershell">.\make
+</code></pre>
+<p>开始编译</p>
+<p>第一次编译以及较大的更改相对耗时较久</p>
+<p><img src="../../public/image/image-20220806095253206.png" alt="image-20220806095253206"></p>
+<p>编译成功后会打开页面</p>
+<p><img src="../../public/image/image-20220806095513373.png" alt="image-20220806095513373"></p>
+<p>也可以直接浏览目录下的<code>build\html</code>文件夹</p>
+<p>不要关闭终端</p>
+<h3>下载中文翻译</h3>
+<p>在终端内输入</p>
+<pre><code class="language-bash">svn checkout https://svn.blender.org/svnroot/bf-manual-translations/trunk/blender_docs/locale/zh-hans locale/zh-hans
+</code></pre>
+<p>此时会在<code>locale\zh-hans\LC_MESSAGES</code>下得到两个po文件</p>
+<p><img src="../../public/image/image-20220806100310045.png" alt="image-20220806100310045"></p>
+<h3>编译中文手册</h3>
+<p>执行</p>
+<pre><code class="language-bash">sphinx-build -b html -D language=zh manual/ build/zhhtml
+</code></pre>
+<p>编译完成后的页面在<code>build\zhhtml</code>下</p>
+<p><img src="../../public/image/image-20220806101310277.png" alt="image-20220806101310277"></p>
+<p>双击index.html即可开始阅读</p>
+<h3>编辑po文件</h3>
+<p>官方推荐的po编辑器为<a href="https://poedit.net/">Poedit</a></p>
+<p>但在笔者实际使用的过程中，Poedit会大量合并行，导致最终的提交超过许可的大小，故在本方案中，推荐使用<a href="https://code.visualstudio.com/">VSCode</a>进行编辑工作</p>
+<p>下载VSCode并打开<code>blender_manual.po</code>文件</p>
+<p>通常会直接提示安装插件，若没有提示可手动查找</p>
+<p><img src="../../public/image/image-20220806101955327.png" alt="image-20220806101955327"></p>
+<p><img src="../../public/image/image-20220806102037496.png" alt="image-20220806102037496"></p>
+<p>可通过搜索快速定位到需要翻译的片段</p>
+<p>在<code>msgstr</code>右侧的字符串中输入翻译的结果，遵循markdown规范</p>
+<p>一些注意点及标准可参考<a href="https://www.jianshu.com/p/b1a48105e05c">blender cn 老教程</a></p>
+<p><code>#, fuzzy</code>表示该段翻译需要修改</p>
+<p>确保不要更改该文件的编码，并保持换行格式等正常</p>
+<h3>翻译参考工具推荐</h3>
+<p>个人推荐使用<a href="https://www.deepl.com/">DeepL</a>作为翻译参考工具，相较其他翻译软件对专业术语有着更好的支持，此外，其客户端支持快速翻译文本的功能</p>
+<p><img src="../../public/image/image-20220806102623539.png" alt="image-20220806102623539"></p>
+<h2>提交工作</h2>
+<p>在完成翻译并确保保存之后，可以通过patch的方式进行提交</p>
+<p>右键修改的文件</p>
+<p><img src="../../public/image/image-20220806102826899.png" alt="image-20220806102826899"></p>
+<p>选择Create patch</p>
+<p>如果Create Patch没有显示在菜单内，可以进入设置勾选</p>
+<p><img src="../../public/image/image-20220806103043110.png" alt="image-20220806103043110"></p>
+<p>接着会出现如图所示窗口，选择OK</p>
+<p><img src="../../public/image/image-20220806103126299.png" alt="image-20220806103126299"></p>
+<p>接着选择保存文件到你知道的目录</p>
+<p>前往<a href="https://developer.blender.org/differential/diff/create/">https://developer.blender.org/differential/diff/create/</a>提交patch文件</p>
+<p>倘若没有账号需要注册一个</p>
+<p><img src="../../public/image/image-20220806103333200.png" alt="image-20220806103333200"></p>
+<p><code>Raw Diff</code>直接粘贴patch文件内容</p>
+<p><code>Raw Diff From File</code>选择刚才导出的patch文件</p>
+<p><code>Repository</code>选择<code>rBMT Blender Mannual Translations</code></p>
+<p>然后点击Create Diff</p>
+<p><img src="../../public/image/image-20220806103541586.png" alt="image-20220806103541586"></p>
+<p>点击Continue</p>
+<p><img src="../../public/image/image-20220806103853651.png" alt="image-20220806103853651"></p>
+<p>Title为更改赋予标题</p>
+<p>Summary输入更改的概要</p>
+<p>Reviewers与Subscribers通过搜索<code>yuzukyo</code>选择<code>xueke pei</code></p>
+<p>Repository选择<code>rBMT Blender Mannual Translations</code></p>
+<p>Tags选择Translations</p>
+<p>接着点击Create New Revision</p>
+<p>接下来等待审核通过即可</p>
+<p>此外，也可以直接申请官方提交权限进行提交</p>
+<p><img src="../../public/image/image-20220806104242245.png" alt="image-20220806104242245"></p>
+<h2>后记</h2>
+<p>​		blender是一个社区驱动的开源软件，其进步与维护工作依赖社区完成，也因此可能会出现有的部分进度严重落后的情况，截止笔者更新时，blender中文文档的大量片段仍为英文，大大干扰了文档的可阅读性，也不利于必要时查阅文档，在此由衷地期望各位能够参与到文档翻译或者其他blender贡献工作中来，为社区的发展添光添彩。</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2022-08-06T10:55:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[远程桌面服务配置的部分记录]]></title>
+        <id>copur.xyz/posts/rdp-notes</id>
+        <link href="copur.xyz/posts/rdp-notes"/>
+        <updated>2022-06-02T14:12:28.000Z</updated>
+        <content type="html"><![CDATA[<h1>远程桌面服务配置的部分记录</h1>
+<p>因工作学习需要，最近和室友合资购入了一台电脑，为便于使用进行rdp的配置</p>
+<h2>RDP补全升级</h2>
+<p>使用<a href="https://www.hankeer.org/article/superrdp2.html">SuperRDP2</a>对Windows版本进行补全</p>
+<p>同时后续的组策略相关内容，建议使用专业版</p>
+<p>原本参考使用的是<a href="https://github.com/stascorp/rdpwrap">RDPWrap</a>，但因为RDPWrap已经年久失修，且无法及时适配新版版本，使用面有限</p>
+<!-- more -->
+<p>SuperRDP2主要功能</p>
+<ol>
+<li>拉去线上最新配置信息，自动重装</li>
+<li>实时检查远程桌面开启状态</li>
+<li><strong>高级功能：自动分析</strong> 1）支持自动分析未支持版本，自动支持。 2）系统升级后自动分析支持新版本（开启自动分析、开机启动）</li>
+<li>备份当前配置到SuperRDP2目录并分享到GitHub</li>
+</ol>
+<p>其中自动分析需要使用作者的公众号获取代码开启</p>
+<h2>开启远程桌面</h2>
+<blockquote>
+<p>请确保使用的是Windows专业版（或更完整版本）或者已经通过SuperRDP2进行补全</p>
+</blockquote>
+<p>通过点击设置 -&gt; 远程桌面</p>
+<p><img src="../../public/image/image-20220602135154850.png" alt="image-20220602135154850"></p>
+<p>随后点击下方的<code>远程桌面用户</code>添加能加入远程桌面的用户</p>
+<p><img src="../../public/image/image-20220602135319582.png" alt="image-20220602135319582"></p>
+<h2>调整组策略</h2>
+<blockquote>
+<p>本章节需要服务端为专业版或更完整版本</p>
+</blockquote>
+<p><code>Win+R</code> 打开运行，输入<code>gpedit.msc</code>，打开本地组策略编辑器，依次选择[计算机配置] --&gt; [管理模板] --&gt; [Windows组件] --&gt; [远程桌面服务] --&gt; [远程会话主机] --&gt; [连接]</p>
+<p>调整如下组策略</p>
+<ol>
+<li>
+<p>启用“限制连接的数量”，根据自己需要设置数量实现多用户登录</p>
+</li>
+<li>
+<p>启用“将远程桌面服务用户限制到单独的远程桌面服务会话”，避免一个用户出现多次连接导致部分程序无法找到</p>
+</li>
+</ol>
+<p><img src="../../public/image/image-20220602135902566.png" alt="image-20220602135902566"></p>
+<p>返回上一级，选择远程会话环境</p>
+<p>调整如下组策略</p>
+<ul>
+<li>启用“将硬件图形适配器应用于所有远程桌面服务会话”以使用硬件加速</li>
+</ul>
+<p>可以下载<a href="https://developer.nvidia.com/nvidia-opengl-rdp">nvidia-opengl-rdp</a>以启用n卡的硬件加速</p>
+<p>此处可以根据需要调整更多组策略以适应需求</p>
+<p><img src="../../public/image/image-20220602140400224.png" alt="image-20220602140400224"></p>
+<p>可在用户机的组策略</p>
+<p>[计算机配置] --&gt; [管理模板] --&gt; [Windows组件] --&gt; [远程桌面服务] --&gt; [远程桌面连接客户端] --&gt; [RemoteFX USB设备重定向]</p>
+<p>启用“允许此计算机中手指操的其他RemoteFX USB 设备的RDP重定向”</p>
+<p>从而在rdp中使用本地u盘</p>
+<p><img src="../../public/image/image-20220602140717000.png" alt="image-20220602140717000"></p>
+<h2>外部访问设置</h2>
+<p>远程桌面连接默认只能在局域网内使用，所以需要特殊配置从外连接</p>
+<h3>IPv6</h3>
+<p>由于拥有公网IPv6，所以使用相对简单，经过选择后决定使用<a href="https://github.com/jeessy2/ddns-go">ddns-go</a>将ip固定到域名</p>
+<p>因为是Windows，所以只能使用<code>系统中使用</code>的方案</p>
+<p>下载并解压<a href="https://github.com/jeessy2/ddns-go/releases">https://github.com/jeessy2/ddns-go/releases</a></p>
+<p>双击运行程序将自动打开<a href="http://127.0.0.1:9876/">http://127.0.0.1:9876</a>指导配置</p>
+<p>以管理员身份运行<code>.\ddns-go.exe -s install</code>可以将ddns-go作为服务安装</p>
+<p>因为使用的是IPv6，所以需要在设置界面中打开IPv6</p>
+<p>钉钉机器人配置:</p>
+<ul>
+<li>钉钉电脑端 -&gt; 群设置 -&gt; 智能群助手 -&gt; 添加机器人 -&gt; 自定义</li>
+<li>只勾选 <code>自定义关键词</code>, 输入的关键字必须包含在RequestBody的content中, 如：<code>你的公网IP变了</code></li>
+<li>URL中输入钉钉给你的 <code>Webhook地址</code></li>
+<li>RequestBody中输入 <code>{&quot;msgtype&quot;: &quot;markdown&quot;,&quot;markdown&quot;: {&quot;title&quot;:&quot;你的公网IP变了&quot;,&quot;text&quot;: &quot;#### 你的公网IP变了 \n - IPV6地址：#{ipv6Addr} \n - 域名更新结果：#{ipv6Result} \n - 域名结果：#{ipv6Domains} \n&quot;}}</code></li>
+</ul>
+<h3>IPv4配置</h3>
+<p>因为本来就有一台服务器（内网穿透软件好贵😭），考虑之后使用自建<a href="https://github.com/fatedier/frp">frp</a></p>
+<p>服务端使用Linux</p>
+<pre><code class="language-bash">wget https://github.com/fatedier/frp/releases/download/v0.43.0/frp_0.43.0_linux_amd64.tar.gz
+tar -zxvf frp_0.43.0_linux_amd64.tar.gz
+cd frp_0.43.0_linux_amd64/
+mkdir -p /etc/frp
+mv *.ini /etc/frp
+mv frpc frps /usr/bin
+</code></pre>
+<p>新建<code>/usr/lib/systemd/system/frps.service:</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Frp Server Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/frps -c /etc/frp/frps.ini
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<pre><code class="language-bash">systemctl enable frps
+systemctl start frps
+</code></pre>
+<blockquote>
+<p>安全组需要同时放行7000和4433端口</p>
+</blockquote>
+<p>客户端使用windows</p>
+<p>下载并解压frp</p>
+<p>frpc.ini</p>
+<pre><code class="language-ini">[common]
+server_addr = 42.192.48.40
+server_port = 7000
+
+[rdp]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 3389
+remote_port = 4433
+
+[rdp_udp]
+type = udp
+local_ip = 127.0.0.1
+local_port = 3389
+remote_port = 4433
+</code></pre>
+<p>测试无碍后</p>
+<p>使用<a href="https://github.com/winsw/winsw">winsw</a>将frp作为服务启动</p>
+<p>frpc.xml</p>
+<pre><code class="language-xml">&lt;service&gt;
+    &lt;id&gt;frp&lt;/id&gt;
+    &lt;name&gt;frp&lt;/name&gt;
+    &lt;description&gt;frpc rdp服务&lt;/description&gt;
+    &lt;executable&gt;frpc&lt;/executable&gt;
+    &lt;arguments&gt;-c frpc.ini&lt;/arguments&gt;
+    &lt;logmode&gt;reset&lt;/logmode&gt;
+&lt;/service&gt;
+</code></pre>
+<p>将<code>winsw.exe</code>、<code>frpc.xml</code>、<code>frpc.exe</code>、<code>frpc.ini</code>置于同一目录下</p>
+<pre><code class="language-powershell">.\winsw install frpc.xml
+</code></pre>
+<p>运行<code>services.msc</code>即可看到相关服务，可以进行登录账号等设置</p>
+<blockquote>
+<p>如果出现rdp无法连接的情况，请检查rdp服务是否仍在正常运行</p>
+</blockquote>
+<h2>端口修改</h2>
+<blockquote>
+<p>修改端口后需要同时修改上面的frp服务配置</p>
+</blockquote>
+<p>可在<code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp</code>处找到端口并修改</p>
+<p>运行以下命令查看当前端口</p>
+<pre><code class="language-powershell">Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name &quot;PortNumber&quot;
+</code></pre>
+<p>运行以下命令将端口修改为4433</p>
+<pre><code class="language-powershell">$portvalue = 4433
+
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name &quot;PortNumber&quot; -Value $portvalue 
+
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-TCP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $portvalue 
+New-NetFirewallRule -DisplayName 'RDPPORTLatest-UDP-In' -Profile 'Public' -Direction Inbound -Action Allow -Protocol UDP -LocalPort $portvalue
+</code></pre>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2022-06-02T14:12:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[局域网文件传输的方案解决]]></title>
+        <id>copur.xyz/posts/snap-drop</id>
+        <link href="copur.xyz/posts/snap-drop"/>
+        <updated>2022-06-02T14:10:28.000Z</updated>
+        <content type="html"><![CDATA[<h1>局域网文件传输的方案解决</h1>
+<p>​		随着工作学习传输文件的需求日益加大以及无法承受高昂的云同步服务以及即时通讯软件文件传送速度的日益下滑，遂开始寻求更方便的文件传输方案，nas等方案由于成本过高，暂时舍弃</p>
+<h2>Huawei Share</h2>
+<p>​		不依赖与局域网（或者说会自动完成热点建立）</p>
+<p>​		目前个人最推荐的Windows文件传送方案，但由于其为品牌独有功能，不利于协作，所以需要其他的文件传送方案作为保底补充，同理舍弃的还有Airdrop。</p>
+<!-- more -->
+<p><img src="../../public/image/image-20220602142833066.png" alt="image-20220602142833066"></p>
+<h2>就近共享</h2>
+<p>Windows 10起自带</p>
+<p>​		本来有考虑将该功能作为保底方案，但很可惜在第一次使用时花费了许久才发现另一台设备，故舍弃。</p>
+<p><img src="../../public/image/image-20220602143104635.png" alt="image-20220602143104635"></p>
+<h2>文件快传服务</h2>
+<p>​			<a href="https://www.wenshushu.cn/">文叔叔</a>和<a href="https://cowtransfer.com/">奶牛快传</a>服务虽然传输速度相对较快，但对大文件均有不同程度限制，无法满足需求。此外，先上传后下载的策略相对耗费更多时间，而且无法保证文件安全。</p>
+<h2>坚果云类同步</h2>
+<p>​		体验不错，同理无法满足大文件快传需求，符合其同步盘的定位而非本次快传的需求</p>
+<h2>Snapdrop</h2>
+<p>​		在<a href="https://sspai.com/post/67112">《有沒有支持跨平台的 Airdrop 呢？》</a>一文的指导下了解到Snapdrop，但在笔者尝试的时候，<a href="https://snapdrop.net/">Snapdrop官方</a>似乎已经无法使用，在了解到存在自己部署的版本<a href="https://github.com/Bellisario/node-snapdrop">node-snapdrop</a>后进行自己部署，相关部署过程可以参考<a href="https://rickg.cn/">Cpl.Kerry</a>的<a href="https://rickg.cn/2022/05/28/deploy-snapdrop/">《在自有服务器上部署Snapdrop》</a></p>
+<h2>后记</h2>
+<p>​		在经过一段时间的使用后，Snapdrop较为符合本次需求，能够很好地作为<code>Huawei Share</code>和<code>Snapdrop</code>的补充，虽然速度有待提升，以及依赖局域网环境，但总体表现仍然优于以上各类替代方案</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2022-06-02T14:10:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[学委的小惊喜]]></title>
+        <id>copur.xyz/posts/zjj</id>
+        <link href="copur.xyz/posts/zjj"/>
+        <updated>2021-11-10T23:02:16.000Z</updated>
+        <content type="html"><![CDATA[<h4>行行好</h4>
+<p>朋友</p>
+<p>救救孩子</p>
+<p>双十一又到了</p>
+<p>在零点的那一刻</p>
+<p>在亮起手机屏幕的那一刻</p>
+<p>在打开天猫淘宝的那一刻</p>
+<p>心的狂跳</p>
+<p>手指的颤动</p>
+<p>全都随着购物车的清空而一扫而空</p>
+<!-- more -->
+<p>尔后</p>
+<p>是一阵悸动</p>
+<p>仿佛世间良品尽收手里</p>
+<p>自此之后</p>
+<p>贫穷常伴</p>
+<p>吃土代替一日三餐</p>
+<p>而大学生活还很漫长</p>
+<p>生命又是那样脆弱</p>
+<p>救救孩子！</p>
+<p>生活所逼</p>
+<p>来此乞讨</p>
+<p>......</p>
+<p>不乞恩惠钱财</p>
+<p>只求你尽享每一处良辰美景</p>
+<p>感悟灵魂的升华</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2021-11-10T23:02:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从零开始制作一个音乐播放器]]></title>
+        <id>copur.xyz/posts/coda-build</id>
+        <link href="copur.xyz/posts/coda-build"/>
+        <updated>2020-11-14T18:20:37.000Z</updated>
+        <content type="html"><![CDATA[<h2>起因</h2>
+<p>关于为啥要做这个音乐播放器。这有好多原因，最重要的自然是因为想听歌，但是网易官方的客户端在播放的时候用着不顺手，另外，感觉官方的客户端功能对我来说实在太多功能了，许多功能我实际上是用不到的，于是想动手开始写一个合自己心意的播放器。其次<a href="https://xinda233.top/">@xinda</a>的inn项目给了我很多启发，因此动笔开工。</p>
+<!-- more -->
+<h3>为啥百度轻咕了？</h3>
+<p>步入高三，很多时候的都身不由己，因此这个项目恐怕之后也无法持续更新。</p>
+<h2>准备</h2>
+<p>思考再三，暂时也没有什么时间学习新东西，于是决定使用自己暂时最顺手的<a href="https://electronjs.org">electron</a>加上推荐给<a href="https://xinda233.top/">@xinda233</a>用的<a href="https://binaryify.github.io/NeteaseCloudMusicApi/">NeteaseCloudMusicApi</a>，参考<a href="https://ant.design/docs/spec/introduce-cn">Ant Design</a>为设计标准，差不多也万事俱备了</p>
+<p>配色系统： <a href="https://colors.muz.li/">Muzli Colors</a><br>
+API： <a href="https://binaryify.github.io/NeteaseCloudMusicApi/">NeteaseCloudMusicApi</a><br>
+UI库： <a href="https://electronjs.org">electron</a><br>
+语言： <a href="https://nodejs.org/">NodeJS</a></p>
+<h2>环境搭建</h2>
+<ol>
+<li>首先安装<a href="https://nodejs.org/">nodejs</a>环境，毕竟不是第一次使用node，这个早早准备好了。</li>
+<li>接着安装electron，因为我还不会使用electron-builder，而且为了减少项目文件夹体积，选择全局安装 <code>npm install electron -g</code></li>
+<li>执行<code> md codemusic ; cd codemusic ; npm init</code>新建开发项目（现在在Windows环境下）</li>
+</ol>
+<p><img src="https://img13.360buyimg.com/ddimg/jfs/t1/135134/33/16034/66546/5fafc33eEbadef6c8/9331f90a7ba20fb8.png" alt="1.png"></p>
+<ol start="4">
+<li>新建完<code>index.js</code>和<code>index.html</code>界面如图所示</li>
+</ol>
+<p><img src="https://img13.360buyimg.com/ddimg/jfs/t1/141925/5/14574/147088/5fafc755E5fd8c778/9dacdce40a1463eb.png" alt="1.png"></p>
+<ol start="5">
+<li>到此，一个基本的electron开发环境准备完成</li>
+<li>另外，记得把<code>powershell</code>设置为<code>utf-8</code>参考<a href="https://www.zhihu.com/question/54724102">https://www.zhihu.com/question/54724102</a></li>
+</ol>
+<h2>正式开始</h2>
+<h3>做好一个窗体</h3>
+<p>首先我需要明确自己需要什么，根据已有的设计，界面主要部分是一个圆形窗体加上环绕窗体的环状进度条</p>
+<p>因此，我不需要菜单栏，窗体框架，而且这必须是个不可聚焦且不可改变大小的置顶窗口</p>
+<p>因此我设置如下属性</p>
+<pre><code class="language-json">    focusable: false,
+    alwaysOnTop: true,
+    frame:false,
+    transparent: true, 
+	resizable: false
+</code></pre>
+<p>让我们来试着运行……</p>
+<p>神奇的事情发生了，什么都没有，因为我们的窗体内部还没有绘制任何东西，所以马上开始运行自然只是坑自己</p>
+<p>因为运行时出现了滚动条，所以我们使用css移除它</p>
+<pre><code class="language-css">body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-app-region: drag;
+}
+</code></pre>
+<h3>环形进度条</h3>
+<p>进度条这东西也不是第一次做，详细可以参考我<a href="https://copur.xyz/post/progressbar/">之前的文章</a></p>
+<p>但是直线进度条变为环形似乎导致了大脑宕机，毕竟我的css知识极其薄弱</p>
+<p>于是一翻收藏夹，找回Ant Design里的进度条，又去掘金找了篇文章<a href="https://juejin.im/post/6844903556164616205">《css3 制作圆环进度条》</a>,以及简书的<a href="https://www.jianshu.com/p/bc94380c4a22">《利用 clip-path 实现环形进度条》</a>，比较过后决定还是使用svg方案。毕竟使用环境为electron，而css实现又过于麻烦，尽管之前有做过<a href="https://copur.xyz/englisten/">css大圆旋转</a>，但也正是因为以前做过，所以再也不想踩进这个坑了。</p>
+<p>在一通折腾后，总算参考<a href="https://www.jb51.net/html5/694584.html">《html svg生成环形进度条的实现方法》</a>完成了</p>
+<p><img src="https://img10.360buyimg.com/ddimg/jfs/t1/122472/12/18581/140702/5fafd5c0Ed12d84af/78be7bf6bc99e683.png" alt="1.png"></p>
+<p>把<a href="https://www.jb51.net/html5/694584.html">《html svg生成环形进度条的实现方法》</a>中的<code>js</code>控制代码改为</p>
+<pre><code class="language-javascript">let path = document.querySelector('.progress');
+let len = path.getTotalLength(); //最大长度
+path.style.strokeDashoffset = &quot;300px&quot;; #为471px减去所需百分比，见后文
+</code></pre>
+<h3>连接网易云</h3>
+<p>按照已有的设计，连接网易的部分不使用原生API实现，转而使用<a href="https://github.com/Binaryify/NeteaseCloudMusicApi">Binaryify/NeteaseCloudMusicApi</a></p>
+<h4>连接准备</h4>
+<ol>
+<li>
+<p>将<a href="https://github.com/Binaryify/NeteaseCloudMusicApi">Binaryify/NeteaseCloudMusicApi</a>目录下的<code>plugins</code>、<code>util</code>、<code>module</code>文件夹和<code>main.js</code>文件拷贝到项目目录下</p>
+</li>
+<li>
+<p>安装模块</p>
+</li>
+</ol>
+<pre><code class="language-shell">npm install asios --save
+npm install pac-proxy-agent --save
+npm install tunnel --save
+</code></pre>
+<h3>开始连接</h3>
+<h4>模块怎么引用</h4>
+<p>首先以歌单详情和歌单url为例</p>
+<p><img src="https://img.maocdn.cn/img/2020/11/28/ov30a.png" alt="ov30a.png"></p>
+<p><img src="https://img.maocdn.cn/img/2020/11/28/ovIKK.png" alt="ovIKK.png"></p>
+<p>由官网给出的请求地址，再结合model下文件名可得</p>
+<p>需要引用的模块名如 <code>/playlist/detail</code> 模块名为 <code>playlist_detail</code></p>
+<p>故得代码如下</p>
+<pre><code class="language-js">const {
+    playlist_detail,
+    song_url,
+} = require('./main')
+async function test() {
+    try {
+        const result = await playlist_detail({
+                id: 5334910692,
+            })
+        console.log(result.body.playlist)
+        const result4 = await song_url({
+            cookie: result.body.cookie,
+            id: 22699108,
+        })
+        console.log(result4.body)
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+test()
+</code></pre>
+<p>得到格式化出来的代码</p>
+<p><img src="https://img.maocdn.cn/img/2020/11/28/oyM1N.png" alt="oyM1N.png"></p>
+<p><img src="https://img.maocdn.cn/img/2020/11/28/ovCwS.png" alt="ovCwS.png"></p>
+<p>结合文档的描述，我们可以轻易看出，需要的歌曲ID数据应在<code>result.body.playlist.trackIds</code>中</p>
+<h3>js控制audio</h3>
+<p>参照<a href="https://www.w3school.com.cn/jsref/dom_obj_audio.asp">HTML DOM Audio 对象</a></p>
+<p>定义一个audio标签</p>
+<pre><code class="language-html">&lt;audio src=&quot;b.mp3&quot; controls=&quot;controls&quot; preload id=&quot;music&quot; hidden&gt;
+</code></pre>
+<p>播放：<code>DOM.play()</code></p>
+<p>暂停：<code>DOM.pause()</code></p>
+<p>是否暂停：<code>DOM.paused</code> 暂停返回true，否则返回false</p>
+<p>时间控制：<code>DOM.currentTime</code>赋值控制，读值读取，以秒计</p>
+<p>总时长：<code>DOM.duration</code> 以秒计</p>
+<h3>实时更新进度条进度</h3>
+<pre><code class="language-javascript">path = document.querySelector('.progress');
+audio = document.getElementById('music');
+async function interv() {
+    setInterval(function() {
+        path.style.strokeDashoffset = parseInt(471 * (1 - audio.currentTime / audio.duration)).toString() + &quot;px&quot;;
+        console.log(path.style.strokeDashoffset)
+    }, 100);
+}
+
+interv()
+</code></pre>
+<h3>生成播放列表</h3>
+<p>首先定义一个<code>playlist</code>数组</p>
+<p>使用<code>foreach</code>遍历返回的<code>result.body.playlist.trackIds</code>将其添加到播放列表</p>
+<pre><code class="language-javascript">result = await playlist_detail({
+    id: 5334910692,
+})
+//console.log(result.body.playlist.trackIds)
+result.body.playlist.trackIds.forEach(function(element) {
+//console.log(element.id);
+var muinfor = {
+    src: &quot;&quot;,
+    name: &quot;&quot;
+}
+muinfor.id = element.id
+playlist.push(muinfor);
+console.log(muinfor)
+});
+</code></pre>
+<p>但是，在这之后发现了一个更坑的问题</p>
+<p>报错代码如下</p>
+<pre><code class="language-powershell">var songcheck = await check_music(reqinfor)
+                ^^^^^
+SyntaxError: await is only valid in async function
+    at wrapSafe (internal/modules/cjs/loader.js:1051:16)
+    at Module._compile (internal/modules/cjs/loader.js:1101:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1166:10)
+    at Module.load (internal/modules/cjs/loader.js:981:32)
+    at Module._load (internal/modules/cjs/loader.js:881:14)
+    at Function.Module._load (electron/js2c/asar.js:769:28)
+    at loadApplicationPackage (C:\Users\19355\AppData\Roaming\npm\node_modules\electron\dist\resources\default_app.asar\main.js:109:16)
+    at Object.&lt;anonymous&gt; (C:\Users\19355\AppData\Roaming\npm\node_modules\electron\dist\resources\default_app.asar\main.js:155:9)
+    at Module._compile (internal/modules/cjs/loader.js:1145:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1166:10)
+</code></pre>
+<p>参考<a href="https://blog.csdn.net/yumikobu/article/details/84639025">《在foreach中使用async/await的问题》</a>后，发现这是foreach导致的坑，一通分析下来，大致能够改为</p>
+<pre><code class="language-javascript">result = await playlist_detail({
+    id: 5334910692,
+})
+//console.log(result.body.playlist.trackIds)
+result.body.playlist.trackIds.forEach(async function(element) {
+//console.log(element.id);
+var muinfor = {
+    src: &quot;&quot;,
+    name: &quot;&quot;
+}
+muinfor.id = element.id
+playlist.push(muinfor);
+console.log(muinfor)
+});
+</code></pre>
+<h3>获取歌曲详情</h3>
+<pre><code class="language-javascript">const result5 = await song_detail({
+    ids: &quot;347230,347231&quot;,
+})
+console.log(result5.body)
+</code></pre>
+<p>得返回结果<br>
+<img src="https://img.maocdn.cn/img/2020/11/28/1c83703e58f81c42f.png" alt="1c83703e58f81c42f.png">]</p>
+<p>分析后发现是中文编码问题，因此将歌曲名作为base64编码</p>
+<pre><code class="language-javascript">let reqinfor = {}
+reqinfor.ids = String(element.id)
+let result5 = await song_detail(reqinfor)
+Buffer.from(result5.body.songs[0].name).toString('base64')
+</code></pre>
+<h4>歌手</h4>
+<pre><code class="language-javascript">let author = []
+result5.body.songs[0].ar.forEach(function(element) {
+    let author_infor = {}
+    author_infor.name = Buffer.from(element.name).toString('base64')
+    author_infor.id = element.id
+    author.push(author_infor)
+})
+muinfor[index].author = author
+</code></pre>
+<p>仔细思考后发现还是不要使用base64编码，不然文件里面一片乱</p>
+<h4>专辑信息</h4>
+<pre><code class="language-javascript">let al = {}
+al.name = result5.body.songs[0].al.name
+al.pic = result5.body.songs[0].al.picUrl
+al.id = result5.body.songs[0].al.id
+muinfor[index].al = al
+</code></pre>
+<h4>汇总</h4>
+<h5>获取歌曲信息</h5>
+<pre><code class="language-javascript">async function getncminfor(id) {
+    let muinfor = {}
+    muinfor.id = id
+    muinfor.type = &quot;ncm&quot;
+    let reqinfor = {}
+    reqinfor.ids = String(element.id)
+    let result5 = await song_detail(reqinfor)
+    muinfor.name = result5.body.songs[0].name
+    let author = []
+    result5.body.songs[0].ar.forEach(function(element) {
+        let author_infor = {}
+        author_infor.name = element.name
+        author_infor.id = element.id
+        author.push(author_infor)
+    })
+    muinfor.author = author
+    let al = {}
+    al.name = result5.body.songs[0].al.name
+    al.pic = result5.body.songs[0].al.picUrl
+    al.id = result5.body.songs[0].al.id
+    muinfor.al = al
+    return muinfor
+}
+</code></pre>
+<h5>保存设置</h5>
+<pre><code class="language-javascript">function saveset() {
+    console.log(playlist)
+    let yamlStr = yaml.dump(playlist);
+    fs.writeFileSync('playlist.yaml', yamlStr, 'utf8');
+    yamlStr = yaml.dump(setda);
+    fs.writeFileSync('setda.yaml', yamlStr, 'utf8');
+}
+</code></pre>
+<h5>获取歌曲URL</h5>
+<pre><code class="language-javascript">async function getncmurl(id) {
+    try {
+        let req = {}
+        let ncmurl
+        req.id = id
+        var songcheck = await check_music(req)
+            //console.log(songcheck.body.message)
+        if (songcheck.body.success) {
+            let result4 = await song_url(req)
+                //console.log(reqinfor[index])
+            console.log(result4.body.data[0].url)
+            ncmurl = result4.body.data[0].url
+        } else {
+            console.log(&quot;No copyright&quot;)
+        }
+        return Promise.resolve(ncmurl)
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+</code></pre>
+<h5>获取歌单详情</h5>
+<pre><code class="language-javascript">async function getncmlist(id) {
+    let req = {}
+    req.id = id
+    result = await playlist_detail(req)
+    let list = []
+    result.body.playlist.trackIds.forEach(async function(element, index) {
+        list[index] = element.id
+    });
+    return list
+}
+</code></pre>
+<h3>使用yaml存储播放列表</h3>
+<p>首先安装</p>
+<pre><code class="language-bash">npm install js-yaml --save
+</code></pre>
+<p>将程序内的播放列表载入</p>
+<pre><code class="language-javascript">let playlistStr = yaml.dump(muinfor);
+fs.writeFileSync('playlist.yaml', playlistStr, 'utf8');
+</code></pre>
+<p>得到yaml文件</p>
+<p><img src="https://img.maocdn.cn/img/2020/12/06/1.png" alt="1.png"></p>
+<h3>前后端连接</h3>
+<p>虽然现在前端部分尚未完成，但貌似前后端连接还是挺重要的，网易的定时失效链接调试的时候还是挺麻烦的</p>
+<blockquote>
+<p>不知不觉半年都过去了，这个项目咕得有点久了，还是得补补         ——2021.4.17</p>
+</blockquote>
+<h4>使用websocket</h4>
+<p>虽然<code>electron</code>本身提供了<code>ipc</code>的通信方案，但因为我以前因为使用<code>ipc</code>传输大量数据后闪退，所以选择相对更为稳定的<code>koa</code>+<code>websocket</code>方案</p>
+<h5>安装依赖</h5>
+<pre><code class="language-bash">npm install koa koa-route koa-websocket bufferutil utf-8-validate --save
+</code></pre>
+<h5>实现</h5>
+<p>原型来自<a href="https://blog.csdn.net/qq_39425927/article/details/107975174">nodejs使用koa+websocket实现点对点的即时通讯</a></p>
+<p>好像一模一样欸😁</p>
+<h6>服务端</h6>
+<pre><code class="language-javascript">// 使用koa
+const koa = require('koa')
+const router = require('koa-router')()
+// koa-websocket是koa封装好的websocket功能
+const websocket = require('koa-websocket')
+// 实例化一个ws服务
+const app = websocket(new koa())
+
+// 用来存储建立了的链接，（真实项目中请使用数据库代替）
+let wsObj = {}
+
+// 监听koa/ws路由，是否有连接
+router.all('/koa/ws', (ctx) =&gt; {
+    // 客户端链接传过来的客户端身份
+    const { id } = ctx.query
+    // 将链接保存起来
+    wsObj[id] = ctx;
+    // 给客户端发送链接成功信息
+    ctx.websocket.send('连接成功');
+    // 监听客户端发送过来的信息
+    ctx.websocket.on('message', function(message) {
+        console.log(message);
+        // uid为接收方，将接收到的信息发送给接收方uid,可以根据自己的需求处理数据再发送
+        const uid = JSON.parse(message).uId;
+        if(!wsObj[uid]){
+            ctx.websocket.send(`${uid}未上线`)
+        }else{
+            wsObj[uid].websocket.send(message)
+        }
+        
+    });
+})
+// 使用路由
+app.ws.use(router.routes()).use(router.allowedMethods())
+
+//端口号后面可采用动态的
+app.listen(3000, () =&gt;
+    console.log('服务启动成功')
+)
+</code></pre>
+<p>数据库啥的就不考虑了，反正只是程序前后端之间的通信（虽然好像程序内通信用<code>websocket</code>挺奇怪的）</p>
+<blockquote>
+<p>后来发现，这篇文章里的玩意还是挺坑的，估计是koa那边更新了</p>
+<p>于是最后参考<a href="https://github.com/kudos/koa-websocket">https://github.com/kudos/koa-websocket</a></p>
+</blockquote>
+<h6>客户端</h6>
+<pre><code class="language-javascript">//连接后端
+let mId = &quot;play&quot;; // 我的id
+let webs = new WebSocket('ws://localhost:3000/koa/ws?id=' + mId) //websocket对象
+webs.onopen = function () {
+    console.log('连接成功')
+}
+// 接收服务器发送的信息
+webs.onmessage = function (evt) {
+    console.log(evt)
+}
+
+function wssend(id, content) {
+    var data = {
+        mId: mId,
+        uId: id,
+        content: content
+    }
+    webs.send(JSON.stringify(data))
+}
+</code></pre>
+<h3>从yaml内加载配置文件</h3>
+<pre><code class="language-javascript">try {
+    let fileContents = fs.readFileSync('./playlist.yaml', 'utf8');
+    playlist = yaml.load(fileContents);
+    console.log(playlist);
+    fileContents = fs.readFileSync('./setda.yaml', 'utf8');
+    setda = yaml.load(fileContents);
+    console.log(setda);
+} catch (e) {
+    console.log(&quot;启动出错&quot;)
+    console.log(e);
+}
+</code></pre>
+<h2>后续步骤</h2>
+<p>由于时间原因，暂时停于此处，日后再更</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-11-14T18:20:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Baidu-light-33主题]]></title>
+        <id>copur.xyz/posts/baidu-light</id>
+        <link href="copur.xyz/posts/baidu-light"/>
+        <updated>2020-07-07T12:53:54.000Z</updated>
+        <content type="html"><![CDATA[<h2>这是什么</h2>
+<p>融合Baidu Lite 百度轻(改)+bilibili33娘，修复Baidu Lite 百度轻(改)首页及搜索页显示错误的问题的一个主题<br>
+本主题适用于怀念百度轻主题的人，只是<s>日常缝缝补补</s>平日只缝缝补补,，如果出现问题请在评论区回复，一般来说10天内会处理，背景图或自定义选项如有建议欢迎在评论区发布</p>
+<h2>为什么要有这个页面？</h2>
+<p>stylish的官方评论区实在太糟糕了，我自己都不想用。</p>
+<!-- more -->
+<h2>使用要求</h2>
+<ol>
+<li>安装有stylish/stylus/xstyle等主题插件或油猴等脚本插件并会使用</li>
+<li>会使用百度</li>
+</ol>
+<h2>特色</h2>
+<p>没啥特色，只是用于纪念百度轻主题，但大体有以下几点</p>
+<ol start="12">
+<li>好看（不好看你装他干啥？）</li>
+<li>修复及时（相对已经弃坑的百度轻原版主题）</li>
+<li>背景图可更换(原则上百度的换肤也可以用，但可能会造成一定的bug)</li>
+</ol>
+<h2>使用</h2>
+<p>访问<a href="https://userstyles.org/styles/183196/baidu-lite-33">主题页面</a>点击安装</p>
+<p>使用cutstomize settings更换背景图</p>
+<h2>使用效果</h2>
+<p><img src="https://bu.dusays.com/2020/07/08/d5af5093c791d.png" alt="百度首页"><em>百度首页</em><br>
+<img src="https://bu.dusays.com/2020/07/08/0c4fde7ffbe61.png" alt="百度搜索结果"><em>百度搜索结果</em><br>
+<img src="https://bu.dusays.com/2020/07/08/0ca70e87f175a.png" alt="百度汉语内容页"><em>百度汉语内容页</em><br>
+<img src="https://bu.dusays.com/2020/07/08/0599d7360193e.png" alt="百度汉语首页"><em>百度汉语首页</em><br>
+<img src="https://bu.dusays.com/2020/07/09/a37ddc4b493a8.png" alt="渐变模式"><em>渐变模式</em><br>
+<img src="https://bu.dusays.com/2020/07/10/1c175a49a4f10.png" alt="渐变模式2"><em>渐变模式2</em><br>
+<img src="https://bu.dusays.com/2020/07/09/40418455769ed.png" alt="必应每日一图模式"><em>必应每日一图模式</em></p>
+<h2>更新日志</h2>
+<p>2020.7.16<br>
+增加空白背景选项<br>
+修复百度广告问题(建议还是使用<a href="https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt">ublock</a>之类的东西拦截吧)<br>
+2020.7.9<br>
+<a href="http://xn--hanyu-6r7j49j.baidu.com">支持hanyu.baidu.com</a><br>
+连更结束，开始日常修补模式<br>
+生词本暂无修复方案<br>
+2021.2020.7.9<br>
+支持百度汉语生词本<br>
+支持渐变模式（自定义渐变还没想好）<br>
+修复百度汉语搜索框对齐<br>
+2020.7.8<br>
+支持百度汉语<br>
+2020.7.7<br>
+修复百度特殊日子广告<br>
+修复使用非白色背景图片（例如必应每日一图）时的不适（勉强修下，可能有部分bug）<br>
+去除搜索结果前的百度推广（其他地方没找到）<br>
+2020.7.6<br>
+修复设置按钮偏移问题<br>
+修复登录框偏移问题<br>
+增加背景图来源<br>
+2020.7.5<br>
+必应每日一图效果修复（建议还是用背景，凑合看吧……）<br>
+经实际测试必应每日一图效果不好<br>
+尝试自定义选项<br>
+修复logo与搜索框紧凑问题</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-07-07T12:53:54.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[宝塔vps面板+hexo的网站搭建]]></title>
+        <id>copur.xyz/posts/bt-vps-panel-hexo</id>
+        <link href="copur.xyz/posts/bt-vps-panel-hexo"/>
+        <updated>2020-06-20T21:04:37.000Z</updated>
+        <content type="html"><![CDATA[<h2>宝塔面板的安装</h2>
+<p>这一步相信挺多人其实都会，所以，这里就不累述了<br>
+<a href="https://www.bt.cn/bbs/thread-19376-1-1.html">传送门</a></p>
+<h2>安装nodejs</h2>
+<p>因为centos源里的nodejs版本太低了，经常会出问题，经过多次折腾后，我选择了nvm的方式</p>
+<p>当然了，nvm也是会更新的 请参考你看到这篇文章时的nvm官方安装</p>
+<!-- more -->
+<pre><code class="language-shell">#运行这句前请确保已安装git
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+</code></pre>
+<p>将下面的语句写入<code>.bash_profile</code>,并手动执行一次或重启</p>
+<p>将<code>/root/.nvm</code>移动到<code>/opt/.nvm</code>以实现多用户调用（这步随便你执行与否，反正后文的更新主题脚本要用到）</p>
+<pre><code class="language-shell">export NVM_DIR=/opt/.nvm
+source /opt/.nvm/nvm.sh
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node  #这句用于你的机子在国内的情况。
+</code></pre>
+<p>好了，现在nvm可以用了</p>
+<p>接下来便是nvm的3连操作</p>
+<pre><code class="language-shell">nvm ls-remote #查询可用的node版本
+nvm install 14.4.0 #我选择的是最新版本，版本可以由你自己选
+nvm use 14.4.0 #这句如果你只安装了一个node版本便是可以舍弃的
+</code></pre>
+<h2>安装hexo</h2>
+<p>这里之前的文章讨论过了，此处便不在累述</p>
+<p><a href="https://copur.xyz/post/hugo-github-to-hexo-gitlab/?t=1592659678976">传送门</a></p>
+<h2>安装hexo-myadmin</h2>
+<p>虽然你也可以选择和以前一样，但你都有vps了，为啥不折腾个后台嘞？</p>
+<p><a href="https://github.com/thesadabc/hexo-myadmin">https://github.com/thesadabc/hexo-myadmin</a></p>
+<p><a href="https://www.npmjs.com/package/hexo-admin">hexo-admin</a>和<a href="https://www.npmjs.com/package/hexo-local-admin">hexo-local-admin</a>相信大家能自己折腾</p>
+<pre><code class="language-shell">npm i hexo-myadmin --save
+hexo server
+#或者使用pm2,当然貌似宝塔自己也有个pm2插件，不过我搞不懂怎么用
+pm2 start node_modules/.bin/hexo -- server
+</code></pre>
+<p>访问 域名:4000/admin</p>
+<p>密码保护之类的就参考官方文档好了</p>
+<h2>启动网站</h2>
+<p>在hexo目录下使用hexo g生成页面，在宝塔的网站管理中创建一个静态网站指向你hexo目录下的public文件夹</p>
+<p>绑定ssl什么的相信不是难事</p>
+<h3>如何使用自定义的404页面</h3>
+<p>打开nginx的配置文件</p>
+<p>写上<code>error_page 404 /404.html;</code>不过好像宝塔生成的nginx配置里有这个注释，直接取消注释就好 /404.html改为你想要的404页面</p>
+<h3>403错误</h3>
+<p>检查你博客根目录权限与root是否一致</p>
+<h3>如何自动更新主题？</h3>
+<pre><code class="language-shell">export NVM_DIR=/opt/.nvm
+source /opt/.nvm/nvm.sh
+cd 你的博客根目录/themes/yun/ #yun替换为你的主题名称
+git pull
+cd 你的博客根目录
+hexo clean
+hexo g
+</code></pre>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-06-20T21:04:37.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[express的post跨域问题和前端原生js的post实现]]></title>
+        <id>copur.xyz/posts/js-post</id>
+        <link href="copur.xyz/posts/js-post"/>
+        <updated>2020-06-06T19:16:00.000Z</updated>
+        <content type="html"><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这是post的js实现</p>
+<!-- more -->
+<h2>贴出代码</h2>
+<p>后端js</p>
+<pre><code class="language-javascript">var express = require('express')
+var app = express()
+var bodyParser = require('body-parser')
+
+app.use(bodyParser.json())
+//  跨域部分
+app.all('*', function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS')
+  res.header('Access-Control-Allow-Headers', 'X-Requested-With')
+  res.header('Access-Control-Allow-Headers', 'Content-Type')
+  next()
+})
+
+app.get('/', function (req, res) {
+  console.log('主页 GET 请求 危险连接')
+  console.log(req.body)
+  res.send('危险连接')
+})
+
+//  POST 请求
+app.post('/', function (req, res) {
+  console.log('主页 POST 请求')
+  console.log(req.body)
+  res.send('Hello POST')
+})
+
+var server = app.listen(8081, function () {
+  var host = server.address().address
+  var port = server.address().port
+
+  console.log('测试服务器已启动，运行在', host, port)
+})
+
+</code></pre>
+<p>前端js</p>
+<pre><code class="language-javascript">     xmlHttp = new XMLHttpRequest()
+      var array = [{ id: 'hello', hello: 'value' }]
+      xmlHttp.open('post', 'http://127.0.0.1:8081')
+      var ele_csrf = document.getElementsByName('csrfmiddlewaretoken')[0]
+      xmlHttp.setRequestHeader('Content-Type', 'application/json')
+      xmlHttp.send(JSON.stringify(array))
+      xmlHttp.onreadystatechange = function () {
+        if (this.status == 200) {
+          console.log('返回数据为', this.responseText)
+          console.log('返回数据为', JSON.parse(his.responseText))
+        }
+      }
+</code></pre>
+<h2>结果展示</h2>
+<p>这个没啥好展示的，毕竟是后端功能</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-06-06T19:16:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[基本组件系列——进度条]]></title>
+        <id>copur.xyz/posts/progressbar</id>
+        <link href="copur.xyz/posts/progressbar"/>
+        <updated>2020-05-23T16:12:28.000Z</updated>
+        <content type="html"><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这个玩意只是对于ant design中<a href="https://ant.design/components/progress-cn/">进度条</a>的原生实现</p>
+<!-- more -->
+<h2>贴出代码</h2>
+<p>HTML部分</p>
+<pre><code class="language-html">&lt;div class=&quot;progressbox&quot;&gt;
+	&lt;div style=&quot;width: 50%;&quot; class=&quot;progressbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>css部分</p>
+<pre><code class="language-css">.progressbox {
+    border-style: none;
+    border-radius: 10px;
+    height: 6px;
+    width: 100%;
+    background-color: #ededed;
+}
+
+.progressbar {
+    background-color: var(--theme, #13c2c2);
+    border-radius: 100px;
+    height: 6px;
+    transition: all 0.8s cubic-bezier(0.08, 0.82, 0.17, 1) 0s;
+}
+
+.progressbar::before {
+    height: 6px;
+    border-radius: 100px;
+    animation: progress 2.4s infinite cubic-bezier(0.23, 1, 0.32, 1);
+    content: &quot;&quot;;
+    display: block;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+        background: rgba(255, 255, 255, 0.4);
+    }
+    to {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+</code></pre>
+<h2>结果展示</h2>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-05-23T16:12:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[基本组件系列——数字输入框]]></title>
+        <id>copur.xyz/posts/inputnum</id>
+        <link href="copur.xyz/posts/inputnum"/>
+        <updated>2020-05-23T15:12:28.000Z</updated>
+        <content type="html"><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这个玩意只是对于ant design中<a href="https://ant.design/components/input-number-cn/">数字输入框</a>的原生实现</p>
+<p>由于采用了flex布局，导致兼容性可能有所下降</p>
+<!-- more -->
+<h2>贴出代码</h2>
+<p>js部分</p>
+<pre><code class="language-javascript">[].forEach.call(document.querySelectorAll(&quot;.inputnum&gt;div:last-child&gt;div:first-child&quot;), function (item, index, input) {
+    item.onclick = function () {
+        if (this.parentNode.parentNode.querySelector(&quot;input&quot;).value == &quot;&quot;) {
+            this.parentNode.parentNode.querySelector(&quot;input&quot;).value = &quot;0&quot;
+        }
+        this.parentNode.parentNode.querySelector(&quot;input&quot;).value = (parseInt(this.parentNode.parentNode.querySelector(&quot;input&quot;).value) + 1).toString()
+        this.parentNode.parentNode.querySelector(&quot;input&quot;).focus();
+    };
+});
+[].forEach.call(document.querySelectorAll(&quot;.inputnum&gt;div:last-child&gt;div:last-child&quot;), function (item, index, input) {
+    item.onclick = function () {
+        if (this.parentNode.parentNode.querySelector(&quot;input&quot;).value == &quot;&quot;) {
+            this.parentNode.parentNode.querySelector(&quot;input&quot;).value = &quot;0&quot;
+        }
+        this.parentNode.parentNode.querySelector(&quot;input&quot;).value = (parseInt(this.parentNode.parentNode.querySelector(&quot;input&quot;).value) - 1).toString()
+        this.parentNode.parentNode.querySelector(&quot;input&quot;).focus();
+    };
+});
+</code></pre>
+<p>HTML部分</p>
+<pre><code class="language-html">                    &lt;div class=&quot;inputnum&quot;&gt;
+                        &lt;input oninput=&quot;value=value.replace(/[^\d]/g,'')&quot;&gt;&lt;/input&gt;
+                        &lt;div&gt;
+                            &lt;div&gt;&lt;svg class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;
+                                    &lt;use xlink:href=&quot;#iconshang&quot;&gt;&lt;/use&gt;
+                                &lt;/svg&gt;&lt;/div&gt;
+                            &lt;div&gt;&lt;svg class=&quot;icon&quot; aria-hidden=&quot;true&quot;&gt;
+                                    &lt;use xlink:href=&quot;#iconxia&quot;&gt;&lt;/use&gt;
+                                &lt;/svg&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+		&lt;script src = &quot;//at.alicdn.com/t/font_1692769_xpkzsmmcyb.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>css部分</p>
+<pre><code class="language-css">        .inputnum {
+            width: 111px;
+            height: 53px;
+            display: flex;
+            border-color: #D0CECE;
+            border-width: 1px;
+            border-radius: 8px;
+            border-style: solid;
+            margin: 3px;
+        }
+        
+        .inputnum&gt;input:first-child {
+            width: 75%;
+            border-style: none;
+            border-radius: 8px;
+            outline: none;
+            color: var(--theme, #13C2C2);
+            font-size: 28px;
+            text-align: center;
+        }
+        
+        .inputnum&gt;input:first-child:focus {
+            border-style: none;
+        }
+        
+        .inputnum&gt;div:last-child {
+            width: 25%;
+            height: 100%;
+            border-left-color: var(--theme, #13C2C2);
+            border-width: 1px;
+            border-left-style: solid;
+            border-bottom-style: none;
+            border-right-style: none;
+            border-top-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column
+        }
+        
+        .inputnum&gt;div:last-child&gt;div {
+            width: 100%;
+            height: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s 0s;
+        }
+        
+        .inputnum&gt;div:last-child&gt;div:hover {
+            height: 55%;
+        }
+        
+        .inputnum&gt;div:last-child&gt;div:first-child {
+            border-bottom-color: var(--theme, #13C2C2);
+            border-width: 1px;
+            border-bottom-style: solid;
+            border-left-style: none;
+            border-right-style: none;
+            border-top-style: none;
+        }
+        
+        .inputnum&gt;div:last-child&gt;div&gt;svg {
+            font-size: 23px;
+            color: var(--theme, #13C2C2);
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+</code></pre>
+<h2>结果展示</h2>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-05-23T15:12:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[edgeless for Linux食用手册]]></title>
+        <id>copur.xyz/posts/elwi</id>
+        <link href="copur.xyz/posts/elwi"/>
+        <updated>2020-05-16T21:26:28.000Z</updated>
+        <content type="html"><![CDATA[<h2>完善的文档</h2>
+<p>首先声明，这不是PE，这是用于优化wine体验的玩意</p>
+<p>首先，因为这个是内测版应用，所以wine、7z、文泉驿和容器等依赖都未实现自动安装</p>
+<p>所以第一步当然就是安装wine 7z 文泉驿啦</p>
+<!-- more -->
+<p>这几个应该不用介绍了，毕竟不同系统的安装方式不一样，而且怎么装软件应该也是常识了。</p>
+<p>接着运行加载器，如果没有正常打开请右键属性使其成为一个可执行程序或其它花里胡哨的方式，别问我命令行，问就是图形界面能完成。</p>
+<p>运行后将要加载的插件包拖入弹出的终端窗口</p>
+<p><img src="https://copur.xyz/images/elwi.png" alt="img"></p>
+<p>若是第一次运行则会提示下载运行容器，建议输入1从直链服务器下载</p>
+<p>下载完毕之后插件便是自动加载了</p>
+<p>当然，如果曾经加载过某个插件而又没有处理干净的，可能会出现7z的提示是否覆盖文件，这种直接打个A全部替换了。</p>
+<p>如果是只会创建桌面图标的插件，可能需要手动去用户文件夹的桌面文件夹将生成的快捷方式丢到合适位置。</p>
+<p>至于为什么要做这玩意，那就别问了，内测期间更希望能听到反馈，何况我经常会不在线。</p>
+<p>由于是内测，下载就只允许通过群文件下载了</p>
+<p>反馈欢迎通过群里联系路人甲或留于页面下方评论区</p>
+<h2>简单版文档</h2>
+<p>相信大家懒得看前面的废话</p>
+<p>归结为以下几步</p>
+<ol>
+<li>打开程序</li>
+<li>把要加载的插件包拖进去</li>
+<li>没容器按照提示下载安装，有容器开始加载</li>
+</ol>
+<h2>容器升级日志</h2>
+<blockquote>
+<p>0.0.2.1355 修复重现0.0.1</p>
+</blockquote>
+<blockquote>
+<p>0.0.2.1411 解除依赖文泉驿，更新字体为更纱黑体</p>
+</blockquote>
+<blockquote>
+<p>0.0.2.1432 修复字体映射 修复wineconsole设置</p>
+</blockquote>
+<blockquote>
+<p>0.0.2.1443 补全常用运行库</p>
+</blockquote>
+<hr>
+<p>0.0.2.1443<a href="https://alumnialbany-my.sharepoint.com/:u:/g/personal/yang_alumni_albany_edu/EWPKzr07uotIu01Q7hoGxGwBpq5nOGPB0dG0-6-FuJBS2g?e=5vLa4Z">下载地址</a></p>
+<p><a href="https://alumnialbany-my.sharepoint.com/:u:/g/personal/yang_alumni_albany_edu/EWPKzr07uotIu01Q7hoGxGwBpq5nOGPB0dG0-6-FuJBS2g?e=5vLa4Z">https://alumnialbany-my.sharepoint.com/:u:/g/personal/yang_alumni_albany_edu/EWPKzr07uotIu01Q7hoGxGwBpq5nOGPB0dG0-6-FuJBS2g?e=5vLa4Z</a></p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-05-16T21:26:28.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[从Hugo+github迁移到hexo+gitlab]]></title>
+        <id>copur.xyz/posts/hugo-github-to-hexo-gitlab</id>
+        <link href="copur.xyz/posts/hugo-github-to-hexo-gitlab"/>
+        <updated>2020-05-04T09:05:16.000Z</updated>
+        <content type="html"><![CDATA[<p>因为GitHub那边SEO问题老是难以解决，而且每次构建再上传的过程特别繁琐，因此就从github迁移到了gitlab。</p>
+<!-- more -->
+<h2>本地建立Hexo站点</h2>
+<p>安装nodejs和git应该不用说了吧？毕竟是从github+hugo迁移过来的。</p>
+<p>具体可以参考<a href="https://www.yunyoujun.cn/share/how-to-build-your-site/">云游君的文章</a></p>
+<pre><code class="language-shell">npm install hexo-cli -g
+hexo init hello.gitlab.io
+cd hello.gitlab.io
+npm install
+</code></pre>
+<p>主题建议用云游君的<a href="https://yun.yunyoujun.cn/">Hexo-theme-yun</a>或者MARKSZ的<a href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/">Hexo-theme-melody</a></p>
+<p>因为云游君的文章已经用Hexo-theme-yun示范了，我这里就用Hexo-theme-melody吧</p>
+<p>至于为什么选择这两个主题，一个是next主题的hexo实在太多了，另外就是这两个主题的功能也挺多</p>
+<p>接下来继续上面的终端运行</p>
+<pre><code class="language-shell">git clone -b master https://github.com/Molunerfinn/hexo-theme-melody themes/melody
+</code></pre>
+<p>打开当前目录下的<code>_config.yml</code>当然你也可以选择继续使用终端命令</p>
+<pre><code class="language-shell">notepad ./_config.yml   #windows
+vim ./_config.yml       #linux
+nano ./_config.yml
+gedit ./_config.yml
+</code></pre>
+<p>mac因为没用过也不知道是什么，不过推荐还是使用vscode这类代码编辑器打开去打开</p>
+<p>这里可以修改你的站点信息，而且需要去theme字段将其设为melody</p>
+<p>和Hexo-theme-yun一样，需要pug和stylus</p>
+<pre><code class="language-shell">npm install hexo-renderer-pug hexo-renderer-stylus --save
+</code></pre>
+<p>当然推荐在source/_data目录下新建一个<code>melody.yml</code>用来管理主题设置</p>
+<p>至于主题设置什么的当然是自己去看文档，这里就不多谈了</p>
+<h2>git配置</h2>
+<p>这里首先假设你已经注册好gitlab账号，这种应该不用教吧？</p>
+<p>和github类似，需要创建一个用户名.gitlab.io的项目，可见性建议设为私有</p>
+<p>参考<a href="https://gitlab.com/help/ssh/README#generating-a-new-ssh-key-pair">https://gitlab.com/help/ssh/README#generating-a-new-ssh-key-pair</a>生成你的ssh密钥，接着去gitlab账户里面记录，当然GitHub那边生成的ssh密钥这边也是能用的，不用重复生成</p>
+<p>执行以下命令</p>
+<pre><code class="language-shell">git init    #把这个文件夹初始化为git仓库
+git remote add origin git@gitlab.com:hello/hello.gitlab.io.git #hello替换为你的gitlab用户名
+</code></pre>
+<p>然后便是熟悉的一连串操作</p>
+<pre><code class="language-shell">$ git add .  #添加文件
+$ git commit -m 'msg'  #添加注释并合并至本地git仓库
+$ git push  #提交至远程仓库
+</code></pre>
+<p>当然，这样上传你会发现是没用的，因为gitlab和Github不同，gitlab page需要ci构建生成。</p>
+<p>接下来我们在当前目录新建一个<code>.gitlab-ci.yml</code>文件，内容如下</p>
+<pre><code class="language-yml">image: node:10.15.3
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install hexo-cli -g
+  - test -e package.json &amp;&amp; npm install
+  - npm install hexo-renderer-pug hexo-renderer-stylus --save
+  - git clone -b master https://github.com/Molunerfinn/hexo-theme-melody themes/melody
+  - npm audit fix
+
+pages:
+  script:
+    - hexo clean
+    - hexo generate
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+</code></pre>
+<p>此外，为了方便推送，最好在目录下新建一个shell脚本，Windows用bat或cmd，linux用sh</p>
+<pre><code class="language-shell">git add .
+git commit -m 'update'
+git push -u origin master
+</code></pre>
+<p>执行这个脚本就会把项目推送到gitlab了，去gitlab的CI/CD→流水线就可以看到了</p>
+<p>接着，去gitlab的项目设置将page设置为公开</p>
+<p>绑定域名什么的就是后话了</p>
+<h2>数据迁移</h2>
+<p>首先是valine，valine是以路径为依据的，只需要去learncloud那边把路径改掉即可</p>
+<p>其次是文章，页面需要依据主题重新添加，而文章需要从post搬迁到_post，头部需要把时间格式修改</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-05-04T09:05:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[英语听力解析系统开发]]></title>
+        <id>copur.xyz/posts/040501</id>
+        <link href="copur.xyz/posts/040501"/>
+        <updated>2020-04-05T12:03:27.000Z</updated>
+        <content type="html"><![CDATA[<p>一个咕了挺久到现在才初见雏形的程序</p>
+<!-- more -->
+<p><img src="https://copur.xyz/images/02050101.png" alt="1"></p>
+<p><img src="https://copur.xyz/images/02050102.png" alt="2"></p>
+<p><img src="https://copur.xyz/images/02050103.png" alt="2"></p>
+<p>思路和开发过程中遇到的坑就等全部完成再写了。</p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-04-05T12:03:27.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[灰了？]]></title>
+        <id>copur.xyz/posts/040401</id>
+        <link href="copur.xyz/posts/040401"/>
+        <updated>2020-04-04T06:28:15.000Z</updated>
+        <content type="html"><![CDATA[<p><code>转自xinda233.top</code></p>
+<p>2020年4月4日全国哀悼日，烈士走好</p>
+<!-- more -->
+<p><img src="https://xinda233.top/usr/uploads/2020/04/1662962447.jpeg" alt="pic"></p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-04-04T06:28:15.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World]]></title>
+        <id>copur.xyz/posts/hello-world</id>
+        <link href="copur.xyz/posts/hello-world"/>
+        <updated>2020-04-02T18:05:57.000Z</updated>
+        <content type="html"><![CDATA[<p>搬迁完成啦</p>
+<!-- more -->
+<p>没啥，只是迁到了gitlab<br>
+<a href="https://copurxia.github.io/">回到旧站</a></p>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-04-02T18:05:57.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Edgeless暴力封装]]></title>
+        <id>copur.xyz/posts/033001</id>
+        <link href="copur.xyz/posts/033001"/>
+        <updated>2020-03-30T15:02:16.000Z</updated>
+        <content type="html"><![CDATA[<p>以前的一篇文章 <a href="https://www.kancloud.cn/cnotech/edgeless/1499994">Cno修饰版</a></p>
+<!-- more -->
+<hr>
+<h3>您可以不经过Edgeless团队的同意自由更改发布插件作品，但是请不要忘记您的道德操守</h3>
+<h3>我们不希望看到有违反Edgeless三无精神（无劫持、无广告、无收费）或是违反中华人民共和国相关法律条款的作品出现，也不会承认此类作品与我们有任何关系</h3>
+<h3>继续开发视为您已经同意此条款</h3>
+<h5>如果您希望能上架您的插件包，请加入<a href="https://www.edgeless.top/jump/qqg.html">内测交流QQ群</a>进行提交</h5>
+<h5>此章节是“开发插件包”的补充章节，帮助较为复杂插件包的简化开发，要求您已了解Edgeless插件包开发的基本步骤</h5>
+<hr>
+<p>以微信PC端为例</p>
+<hr>
+<p>目前准备的有↓</p>
+<blockquote>
+<ol>
+<li>
+<p>微信安装包</p>
+</li>
+<li>
+<p>VMware workstation</p>
+</li>
+<li>
+<p>Edgeless暴力封装专用虚拟机镜像</p>
+</li>
+<li>
+<p>Procmon 分析工具</p>
+</li>
+</ol>
+</blockquote>
+<p>1.使用VMware导入准备的虚拟机镜像</p>
+<p><img src="https://img.kancloud.cn/62/7d/627d1b5fb744b9f198a37787174eb73a_400x249.png" alt="2"></p>
+<p>2.启动虚拟机</p>
+<p>3.将微信安装程序拖放至虚拟机</p>
+<p>4.运行桌面“Cameyo单文件打包制作v3.1.1530.0汉化增强绿色版”文件夹内的“扫描安装过程并打包.exe”</p>
+<p><img src="https://img.kancloud.cn/63/8d/638d41d18c773b0dcc957028a5a36889_1366x768.png" alt="7"></p>
+<p>5.等待扫描结束</p>
+<p>6.扫描结束后会出现如下窗口↓</p>
+<p><img src="https://img.kancloud.cn/6c/65/6c65844d362bc45762ac0d3ac8894dd4_318x142.png" alt="9"></p>
+<p>7.此时运行微信安装程序</p>
+<p>8.按照正常方式安装</p>
+<p><img src="https://img.kancloud.cn/3f/c6/3fc609491bce0963d54a0791f47eeea3_550x405.png" alt="11"></p>
+<p>9.点击安装已完成并再次耐心等待扫描结束</p>
+<p>10.建立一个Edgeless插件目录</p>
+<p><img src="https://img.kancloud.cn/34/91/34912ff8a76950e5383413d08265abbd_512x139.png" alt="14"></p>
+<ol start="11">
+<li>
+<p>wechat.wcs是插件的加载代码，符合<a href="https://www.kancloud.cn/cnotech/edgeless/944471">插件</a>开发文档</p>
+<blockquote>
+<p>exec =!&quot;X:\Program Files\Edgeless\Wechat\setup.cmd&quot;<br>
+link &quot;X:\Users\Default\Desktop\Wechat&quot;,&quot;X:\Program Files (x86)\Tencent\WeChat\WeChat.exe&quot;<br>
+file &quot;X:\Program Files\Edgeless\Wechat&quot;</p>
+</blockquote>
+</li>
+<li>
+<p>Wechat文件夹内是插件的内容包</p>
+<p><img src="https://img.kancloud.cn/22/19/221952742bd69682db7521bfd35b67a6_665x330.png" alt="15"></p>
+</li>
+<li>
+<p>setup.cmd的任务是进行安装过程的模仿</p>
+<blockquote>
+<p>copy *.dll X:\Windows\SysWOW64*.dll<br>
+copy *.dll X:\Windows\system32*.dll<br>
+regedit /s &quot;X:\Program Files\Edgeless\Wechat\reg.reg&quot;<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\System*&quot; &quot;%system%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Windows*&quot; &quot;%Windows%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Personal*&quot; &quot;%Personal%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Appdata*&quot; &quot;%Appdata%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Profiles*&quot; &quot;%Profiles%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Local Appdata*&quot; &quot;%Local Appdata%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Common AppData*&quot; &quot;%Common AppData%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Program Files(x86)*&quot; &quot;%ProgramFiles(x86)%*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Program Files*&quot; &quot;%ProgramFiles%*&quot; /s /e /h /f /y</p>
+</blockquote>
+</li>
+<li>
+<p>reg.reg存储的是程序安装修改的注册表项</p>
+</li>
+<li>
+<p>打开“桌面Cameyo单文件打包制作v3.1.1530.0汉化增强绿色版”文件夹内的“包编辑器By风之暇想.exe”</p>
+<p><img src="https://img.kancloud.cn/37/7c/377c4ee4a56ada7d9e5297200f45ac92_1127x596.png" alt="12"></p>
+</li>
+</ol>
+<p>16.打开文档文件夹内的打包exe</p>
+<p><img src="https://img.kancloud.cn/10/40/1040517d2fdc8708ad05953cf2611b39_312x122.png" alt="13"></p>
+<p>17.可以看到如图所示页面</p>
+<p><img src="https://img.kancloud.cn/e9/48/e9489da60c18629a8010e9ba85450772_721x567.png" alt="16"></p>
+<p>18.打开注册表选项卡，并点击如图所示按钮导出注册表至工程目录内的reg.reg</p>
+<p><img src="https://img.kancloud.cn/ca/85/ca8514441cf6ce38adb2f0841aadf6ab_721x567.png" alt="17"></p>
+<p>18.打开文件选项卡，并点击如图所示按钮保存除Icons和Logs以外文件</p>
+<p><img src="https://img.kancloud.cn/b8/04/b804ec105e7ccf38c911bf2f769294b4_721x567.png" alt="18"></p>
+<p>19.运行Procmon和微信，并在微信上进行诸如登录之类的常用操作</p>
+<p><img src="https://img.kancloud.cn/be/b3/beb3f436605bcf3837fa67e73fda5770_1920x1040.png" alt="19"></p>
+<p>20.点击如图所示按钮进行筛选</p>
+<p><img src="https://img.kancloud.cn/c4/13/c413dc600219d036e36d3a5b39805c04_515x165.png" alt="20"></p>
+<p>21.筛选条件如图↓</p>
+<p><img src="https://img.kancloud.cn/55/e0/55e091c48939508cf254c02e3b12a887_1148x731.png" alt="21"></p>
+<p>22.对事件逐个按下ctrl+k按键并检查调用的函数库</p>
+<p><img src="https://img.kancloud.cn/7c/11/7c11f93413489f32a82ee8e73e34e12b_1920x1040.png" alt="22"></p>
+<p>23.将edgeless缺少的函数库复制到项目文件夹的Wechat的文件夹根目录</p>
+<p><img src="https://img.kancloud.cn/9f/e5/9fe57026918ec6a54dbfcd4f7cba6649_1309x893.png" alt="23"></p>
+<p>24.对Procmon中筛选出的所有事件进行相同操作</p>
+<p>25.适当修改wechat.wcs和setup.cmd以创建快捷方式</p>
+<p>26.为避免错误，setup.cmd内最好使用绝对路径</p>
+<blockquote>
+<p>copy &quot;x:\Program Files\Edgeless\Wechat*.dll&quot; &quot;X:\Windows\SysWOW64*.dll&quot;<br>
+copy &quot;x:\Program Files\Edgeless\Wechat*.dll&quot; &quot;X:\Windows\system32*.dll&quot;<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\System*&quot; &quot;X:\Windows\System32*&quot;  /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Windows*&quot; &quot;X:\Windows*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Personal*&quot; &quot;X:\Users\Default\Documents*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Appdata*&quot; &quot;X:\Users\Default\AppData*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Profiles*&quot; &quot;X:\Users\Default*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Local Appdata*&quot; &quot;X:\Users\Default\AppData\Local*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Common AppData*&quot; &quot;X:\ProgramData*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Program Files(x86)*&quot; &quot;X:\Program Files (x86)*&quot; /s /e /h /f /y<br>
+xcopy &quot;x:\Program Files\Edgeless\Wechat\Program Files*&quot; &quot;X:\Program Files*&quot; /s /e /h /f /y<br>
+regedit /s &quot;X:\Program Files\Edgeless\Wechat\reg.reg&quot;</p>
+</blockquote>
+<p>27.将工程目录封装为7z插件包</p>
+<p><img src="https://img.kancloud.cn/8f/b6/8fb6dae50826b9efa817fd569ab90690_695x254.png" alt="24"></p>
+<p>28.得到的7z文件便是插件包了</p>
+<h4>看完了还是一脸懵逼？</h4>
+<h4>去下载站下一个插件包拆开看看吧</h4>
+]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-03-30T15:02:16.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
+        <id>copur.xyz/posts/hello</id>
+        <link href="copur.xyz/posts/hello"/>
+        <updated>2020-03-30T12:05:57.000Z</updated>
+        <content type="html"><![CDATA[<p>总算重建成功了</p>
+<!-- more -->]]></content>
+        <author>
+            <name>乐得自在</name>
+            <email>me@yunyoujun.cn</email>
+            <uri>https://www.yunyoujun.cn</uri>
+        </author>
+        <published>2020-03-30T12:05:57.000Z</published>
+    </entry>
+</feed>
