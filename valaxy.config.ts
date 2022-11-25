@@ -99,7 +99,7 @@ const config: UserConfig<ThemeUserConfig> = {
         enable: true,
         icp: '浙ICP备2021035374号',
       },
-      powered:true,
+      powered: true,
     },
   },
 
