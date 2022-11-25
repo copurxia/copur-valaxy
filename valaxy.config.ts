@@ -11,6 +11,11 @@ const config: UserConfig<ThemeUserConfig> = {
   author: {
     name: '乐得自在',
     avatar: 'https://copur.xyz/image/avatar.webp',
+    email: 'copur@qq.com',
+    status: {
+      emoji: '🌱',
+      message: '正在努力学习中',
+    }
   },
   description: '闲来无事的小本本.',
   url:"https://copur.xyz",
@@ -58,6 +63,10 @@ const config: UserConfig<ThemeUserConfig> = {
   theme: 'yun',
 
   themeConfig: {
+    bg_image: {
+      enable: true,
+      url: 'https://copur.xyz/wallhaven.webp',
+    },
     banner: {
       enable: true,
       title: '乐得自在的小破站',
