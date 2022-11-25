@@ -10,6 +10,7 @@ const config: UserConfig<ThemeUserConfig> = {
   title: '乐得自在的小破站',
   author: {
     name: '乐得自在',
+    avatar: 'https://copur.xyz/image/avatar.jpg',
   },
   description: '闲来无事的小本本.',
   url:"https://copur.xyz",
