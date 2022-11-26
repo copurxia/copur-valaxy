@@ -2,15 +2,15 @@ lockfileVersion: 5.4
 
 specifiers:
   patch-package: ^6.5.0
-  valaxy: 0.11.2
-  valaxy-addon-waline: ^0.0.3
-  valaxy-theme-yun: 0.11.2
+  valaxy: 0.11.4
+  valaxy-addon-waline: ^0.0.5
+  valaxy-theme-yun: 0.11.4
 
 dependencies:
   patch-package: 6.5.0
-  valaxy: 0.11.2
-  valaxy-addon-waline: 0.0.3
-  valaxy-theme-yun: 0.11.2
+  valaxy: 0.11.4
+  valaxy-addon-waline: 0.0.5
+  valaxy-theme-yun: 0.11.4
 
 packages:
 
@@ -2477,7 +2477,7 @@ packages:
       destr: 1.2.1
       node-fetch-native: 0.1.8
       ufo: 0.8.6
-      undici: 5.12.0
+      undici: 5.13.0
     dev: false
 
   /once/1.4.0:
@@ -2836,7 +2836,7 @@ packages:
     resolution: {integrity: sha512-EugY9VASFuDqOexOgXR18ZV+TbFrQHeCpEYaXamO+SZlsnT/2LxuLBX25GGtIrwaEVFXUAbUQ601SWE2rMwWHA==}
     dependencies:
       jsonc-parser: 3.2.0
-      vscode-oniguruma: 1.6.2
+      vscode-oniguruma: 1.7.0
       vscode-textmate: 6.0.0
     dev: false
 
@@ -3009,8 +3009,8 @@ packages:
       jiti: 1.16.0
     dev: false
 
-  /undici/5.12.0:
-    resolution: {integrity: sha512-zMLamCG62PGjd9HHMpo05bSLvvwWOZgGeiWlN/vlqu3+lRo3elxktVGEyLMX+IO7c2eflLjcW74AlkhEZm15mg==}
+  /undici/5.13.0:
+    resolution: {integrity: sha512-UDZKtwb2k7KRsK4SdXWG7ErXiL7yTGgLWvk2AXO1JMjgjh404nFo6tWSCM2xMpJwMPx3J8i/vfqEh1zOqvj82Q==}
     engines: {node: '>=12.18'}
     dependencies:
       busboy: 1.6.0
@@ -3109,30 +3109,30 @@ packages:
       requires-port: 1.0.0
     dev: false
 
-  /valaxy-addon-waline/0.0.2:
-    resolution: {integrity: sha512-1rc2fW6sOh7XHqzR/QTry+i6KbbXI1hgtzwbsEZSdJtV0g/oE5xbqNnHnN6zfl62FDczj2705/qCC4h0Hvg8zA==}
+  /valaxy-addon-waline/0.0.4:
+    resolution: {integrity: sha512-HHIEp8fI/k2Lj/sPmFZmkLHcT6pa0rE9xQlwz+AnV050UDzz8Vt4ktMOcTJeWLxBBcvgh08x6nCRQ5EhEqvthw==}
     dependencies:
       '@waline/client': 2.14.1
     transitivePeerDependencies:
       - '@vue/composition-api'
     dev: false
 
-  /valaxy-addon-waline/0.0.3:
-    resolution: {integrity: sha512-YBlkawzt8mLqcCYrmCWH8PPTyzjWbZAkT6or/HqXRcpiBmN+f2SwK8TL0uoAx2lMqU2vuZyTsZXebi6K/SFvmw==}
+  /valaxy-addon-waline/0.0.5:
+    resolution: {integrity: sha512-0xtSNdFugTgHKFnsJjr0/qnvyfYx4GB74x0zEhEww03CRdYBg88UZWQaGf5N+68z4v4T1LdPjLFHT8kyzDBe+w==}
     dependencies:
       '@waline/client': 2.14.1
     transitivePeerDependencies:
       - '@vue/composition-api'
     dev: false
 
-  /valaxy-theme-yun/0.11.2:
-    resolution: {integrity: sha512-fMErcJXni6Ym5vpJRsjRmqS9nTL26mM2bCMtE2vkl6BdKAqmjpC0fSFiFgkQ1GgoBvfhEHw7Yf81SQzS9bKneg==}
+  /valaxy-theme-yun/0.11.4:
+    resolution: {integrity: sha512-5H9T3DxIF8ZPKc0Hesqi40pQs10fYFL6G+xydUnpAfiyG882kho5mQExDjh40UlP4s7gO8b+sig3LP81eIMdWQ==}
     dependencies:
       '@docsearch/css': 3.3.0
       '@docsearch/js': 3.3.0
       '@iconify-json/ant-design': 1.1.4
       '@iconify-json/simple-icons': 1.1.36
-      valaxy-addon-waline: 0.0.2
+      valaxy-addon-waline: 0.0.4
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -3141,8 +3141,8 @@ packages:
       - react-dom
     dev: false
 
-  /valaxy/0.11.2:
-    resolution: {integrity: sha512-Yh1hwQcjVCVKilwwM3Vz4XxDUhLvwZbKmi8+UIoM2JZP/+VSZVsWJ1byuMYf5dDtyEG3km42KiZYycrFJqRRIg==}
+  /valaxy/0.11.4:
+    resolution: {integrity: sha512-RAjmpj58tD/7MuSEY6ba3QcxwTE6s3hqh6+2nUgELTrFN7J8PoOBpgmBGkb2NbSfxNbsNHyG5wQDtSY2rd22Zw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -3188,7 +3188,7 @@ packages:
       vite: 3.2.4_sass@1.56.1
       vite-plugin-pages: 0.26.0_vite@3.2.4
       vite-plugin-vue-layouts: 0.7.0_ltio2jrs4h243s6indlqgywoku
-      vite-ssg: 0.21.1_btsslyppnm7dvf4lyxme2fuxdq
+      vite-ssg: 0.22.0_btsslyppnm7dvf4lyxme2fuxdq
       vite-ssg-sitemap: 0.4.3
       vue: 3.2.45
       vue-i18n: 9.2.2_vue@3.2.45
@@ -3258,12 +3258,12 @@ packages:
     resolution: {integrity: sha512-9ZIRBRCgM1Q4RtXXEBHIu8gotbx9LCnHZOZXtdSzR0DnjN9H5IYGY3yGoxI6VX8dScXiluxOODFlNlr7ydyI9A==}
     dev: false
 
-  /vite-ssg/0.21.1_btsslyppnm7dvf4lyxme2fuxdq:
-    resolution: {integrity: sha512-P39lT+ndBbN83SsfrDSc/uU9IHp7BUjYy7ly3I0jB0L+CvI1/R/bJTOkFikw2mS0FDkPTUN2bCqD6VTshtsO2w==}
+  /vite-ssg/0.22.0_btsslyppnm7dvf4lyxme2fuxdq:
+    resolution: {integrity: sha512-GW8hARA4lT4fEAfxfnSEplV5JKQEM15yTVI8SZefYW69xfBVfujZrlqKqory+kHi7rgm7ZEhH8Uv82pdWETiSQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      '@vueuse/head': ^0.5.0 || ^0.6.0 || ^0.7.0 || ^0.8.0 || ^0.9.0
+      '@vueuse/head': ^1.0.0
       critters: ^0.0.16
       vite: ^2.0.0 || ^3.0.0-0
       vue: ^3.2.10
@@ -3274,6 +3274,7 @@ packages:
       vue-router:
         optional: true
     dependencies:
+      '@unhead/dom': 1.0.4
       '@vueuse/head': 1.0.18_vue@3.2.45
       critters: 0.0.16
       fs-extra: 10.1.0
@@ -3327,8 +3328,8 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /vscode-oniguruma/1.6.2:
-    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
+  /vscode-oniguruma/1.7.0:
+    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
     dev: false
 
   /vscode-textmate/6.0.0:
