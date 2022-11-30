@@ -11,7 +11,7 @@ categories: ["建模","工作流"]
 
 <!-- more -->
 
-**Import 3dm插件**
+## Import 3dm插件
 
 插件地址：
 
@@ -27,7 +27,7 @@ import 3dm插件基于rhino3dm模块
 
 就以前使用体验来看，该插件可以直接读取3dm文件，因此在导入文件时可以选择导入具体的图层和物件，但布线极其混乱，甚至难以区分不同的面，会对后续流程产生影响，故此放弃。
 
-**rhino→keyshot→fbx流程**
+## rhino→keyshot→fbx流程
 
 由于keyshot的高兼容性，借由keyshot作为中间过程，由keyshot导出fbx文件再导入blender低较为实用的一种方法。
 
@@ -44,22 +44,19 @@ import 3dm插件基于rhino3dm模块
 keyshot导出fbx的朝向与blender相同，如果是其他软件可能需要手动指定轴方向（万年老问题了
 
 ![image-20221130114655997](./../../public/image/image-20221130114655997.png)
-
 同时也可以看到，该方案导入的布线同样不是很符合我们期望（但至少能用
-
 因此可能需要重拓扑，不过作为单纯的渲染是已经符合需求了
-
 此外还可以通过better_fbx插件来获取更多的导入时选项
-
 注意better_fbx的导入缩放基本正确，如果需要手动缩放和官方fbx导入有所不同
-
 ​                 ![img-zAEcBMwBHAQRHyg](./../../public/image/zAEcBMwBHAQRHyg!.jpeg)
 
-**此外可能的方案**
+## 此外可能的方案
 
 - 在rhino中使用subd进行构建，并且在导出时压边（我未曾使用但是有群友推荐
 
 - 在rhino中使用细分工具的转四边面操作，直接曲面转换和转网格转换是两种不同的效果，然后使用硬表面插件自动锐化处理发现和分UV
+
+## 杂谈
 
 其实就各种方案而言，跨blender工作流都不是很完美，当然这也是blender的重要问题之一
 
