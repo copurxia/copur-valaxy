@@ -21,7 +21,7 @@ import 3dm插件基于rhino3dm模块
 
 但由于blender的颠覆式更新，该插件的更新速度无法追上blender官方的速度
 
-![image-20221130114448645](./../../public/image/image-20221130114448645.png)        
+![image-20221130114448645](https://dist.copur.xyz/image/image-20221130114448645.png)        
 
 我甚至无法正常启用了
 
@@ -33,22 +33,22 @@ import 3dm插件基于rhino3dm模块
 
 不过导入时会同步导入keyshot相机。
 
-​                 ![image-20221130114505758](./../../public/image/image-20221130114505758.png)
+​                 ![image-20221130114505758](https://dist.copur.xyz/image/image-20221130114505758.png)
 
 为避免破坏场景，建议在新的集合内导入。
 
 同时因为尺寸问题，可能需要不同程度的缩放，可以在导入时进行选择
 
-​                 ![image-20221130114539124](./../../public/image/image-20221130114539124.png)
+​                 ![image-20221130114539124](https://dist.copur.xyz/image/image-20221130114539124.png)
 
 keyshot导出fbx的朝向与blender相同，如果是其他软件可能需要手动指定轴方向（万年老问题了
 
-![image-20221130114655997](./../../public/image/image-20221130114655997.png)
+![image-20221130114655997](https://dist.copur.xyz/image/image-20221130114655997.png)
 同时也可以看到，该方案导入的布线同样不是很符合我们期望（但至少能用
 因此可能需要重拓扑，不过作为单纯的渲染是已经符合需求了
 此外还可以通过better_fbx插件来获取更多的导入时选项
 注意better_fbx的导入缩放基本正确，如果需要手动缩放和官方fbx导入有所不同
-​                 ![img-zAEcBMwBHAQRHyg](./../../public/image/zAEcBMwBHAQRHyg!.jpeg)
+​                 ![img-zAEcBMwBHAQRHyg](https://dist.copur.xyz/image/zAEcBMwBHAQRHyg!.jpeg)
 
 ## 此外可能的方案
 
