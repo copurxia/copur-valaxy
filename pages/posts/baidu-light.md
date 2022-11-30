@@ -38,12 +38,12 @@ stylish的官方评论区实在太糟糕了，我自己都不想用。
 
 ## 使用效果
 
-![百度首页](https://bu.dusays.com/2020/07/08/d5af5093c791d.png)_百度首页_
-![百度搜索结果](https://bu.dusays.com/2020/07/08/0c4fde7ffbe61.png)_百度搜索结果_
-![百度汉语内容页](https://bu.dusays.com/2020/07/08/0ca70e87f175a.png)_百度汉语内容页_
-![百度汉语首页](https://bu.dusays.com/2020/07/08/0599d7360193e.png)_百度汉语首页_
-![渐变模式](https://bu.dusays.com/2020/07/09/a37ddc4b493a8.png)_渐变模式_
-![渐变模式2](https://bu.dusays.com/2020/07/10/1c175a49a4f10.png)_渐变模式2_
+![百度首页](https://dist.copur.xyz/image/d5af5093c791d.png)_百度首页_
+![百度搜索结果](https://dist.copur.xyz/image/0c4fde7ffbe61.png)_百度搜索结果_
+![百度汉语内容页](https://dist.copur.xyz/image/0ca70e87f175a.png)_百度汉语内容页_
+![百度汉语首页](https://dist.copur.xyz/image/0599d7360193e.png)_百度汉语首页_
+![渐变模式](https://dist.copur.xyz/image/a37ddc4b493a8.png)_渐变模式_
+![渐变模式2](https://dist.copur.xyz/image/1c175a49a4f10.png)_渐变模式2_
 ![必应每日一图模式](https://bu.dusays.com/2020/07/09/40418455769ed.png)_必应每日一图模式_
 
 ## 更新日志

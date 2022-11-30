@@ -26,7 +26,7 @@ categories: ["教程"]
 
 本人使用的是3.10.6版本，记得勾选`Add to Path`
 
-![image-20220806093154850](../../public/image/image-20220806093154850.png)
+![image-20220806093154850](https://dist.copur.xyz/image/image-20220806093154850-1669782219531-13.png)
 
 ### 安装SVN
 
@@ -34,7 +34,7 @@ SVN管理，官方建议Windows下使用的是[TortoiseSVN](https://tortoisesvn.
 
 选择对应系统版本的下载即可
 
-![image-20220806093435405](../../public/image/image-20220806093435405.png)
+![image-20220806093435405](https://dist.copur.xyz/image/image-20220806093435405-1669782219532-14.png)
 
 最好勾选`Command line client tools`，会在后续较为方便使用
 
@@ -44,7 +44,7 @@ SVN管理，官方建议Windows下使用的是[TortoiseSVN](https://tortoisesvn.
 
 随后在此处右键，点击checkout..
 
-![image-20220806094118045](../../public/image/image-20220806094118045.png)
+![image-20220806094118045](https://dist.copur.xyz/image/image-20220806094118045-1669782219532-17.png)
 
 在URL of repository中填入`https://svn.blender.org/svnroot/bf-manual/trunk/blender_docs`
 
@@ -52,7 +52,7 @@ Checkout of directory中理论上就是刚才新建的空文件夹，直接点�
 
 倘若速度较慢可以在TortoiseSVN设置 -> Network中启用代理，在此不多做解释
 
-![image-20220806094217813](../../public/image/image-20220806094217813.png)
+![image-20220806094217813](https://dist.copur.xyz/image/image-20220806094217813-1669782219532-15.png)
 
 下载完毕后，进入刚才的文件夹右键打开终端（也有可能需要按住`Shift`键再右键）
 
@@ -72,7 +72,7 @@ Successfully installed Jinja2 MarkupSafe Pygments Sphinx docutils sphinx-rtd-the
 pip install -r requirements.txt --upgrade
 ```
 
-确保依赖为最新
+xxxxxxxxxx export NVM_DIR=/opt/.nvmsource /opt/.nvm/nvm.shcd 你的博客根目录/themes/yun/ #yun替换为你的主题名称git pullcd 你的博客根目录hexo cleanhexo gshell
 
 不要关闭终端，后续还需使用
 
@@ -90,11 +90,11 @@ pip install -r requirements.txt --upgrade
 
 第一次编译以及较大的更改相对耗时较久
 
-![image-20220806095253206](../../public/image/image-20220806095253206.png)
+![image-20220806095253206](https://dist.copur.xyz/image/image-20220806095253206-1669782219532-18.png)
 
 编译成功后会打开页面
 
-![image-20220806095513373](../../public/image/image-20220806095513373.png)
+![image-20220806095513373](https://dist.copur.xyz/image/image-20220806095513373-1669782219532-16.png)
 
 也可以直接浏览目录下的`build\html`文件夹
 
@@ -110,7 +110,7 @@ svn checkout https://svn.blender.org/svnroot/bf-manual-translations/trunk/blende
 
 此时会在`locale\zh-hans\LC_MESSAGES`下得到两个po文件
 
-![image-20220806100310045](../../public/image/image-20220806100310045.png)
+![image-20220806100310045](https://dist.copur.xyz/image/image-20220806100310045-1669782219532-19.png)
 
 ### 编译中文手册
 
@@ -122,7 +122,7 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 编译完成后的页面在`build\zhhtml`下
 
-![image-20220806101310277](../../public/image/image-20220806101310277.png)
+![image-20220806101310277](https://dist.copur.xyz/image/image-20220806101310277-1669782219533-30.png)
 
 双击index.html即可开始阅读
 
@@ -136,9 +136,9 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 通常会直接提示安装插件，若没有提示可手动查找
 
-![image-20220806101955327](../../public/image/image-20220806101955327.png)
+![image-20220806101955327](https://dist.copur.xyz/image/image-20220806101955327-1669782219532-23.png)
 
-![image-20220806102037496](../../public/image/image-20220806102037496.png)
+![image-20220806102037496](https://dist.copur.xyz/image/image-20220806102037496-1669782219532-20.png)
 
 可通过搜索快速定位到需要翻译的片段
 
@@ -154,7 +154,7 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 个人推荐使用[DeepL](https://www.deepl.com/)作为翻译参考工具，相较其他翻译软件对专业术语有着更好的支持，此外，其客户端支持快速翻译文本的功能
 
-![image-20220806102623539](../../public/image/image-20220806102623539.png)
+![image-20220806102623539](https://dist.copur.xyz/image/image-20220806102623539-1669782219532-21.png)
 
 ## 提交工作
 
@@ -162,17 +162,17 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 右键修改的文件
 
-![image-20220806102826899](../../public/image/image-20220806102826899.png)
+![image-20220806102826899](https://dist.copur.xyz/image/image-20220806102826899-1669782219532-22.png)
 
 选择Create patch
 
 如果Create Patch没有显示在菜单内，可以进入设置勾选
 
-![image-20220806103043110](../../public/image/image-20220806103043110.png)
+![image-20220806103043110](https://dist.copur.xyz/image/image-20220806103043110-1669782219532-24.png)
 
 接着会出现如图所示窗口，选择OK
 
-![image-20220806103126299](../../public/image/image-20220806103126299.png)
+![image-20220806103126299](https://dist.copur.xyz/image/image-20220806103126299-1669782219532-25.png)
 
 接着选择保存文件到你知道的目录
 
@@ -180,7 +180,7 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 倘若没有账号需要注册一个
 
-![image-20220806103333200](../../public/image/image-20220806103333200.png)
+![image-20220806103333200](https://dist.copur.xyz/image/image-20220806103333200-1669782219532-26.png)
 
 `Raw Diff`直接粘贴patch文件内容
 
@@ -190,11 +190,11 @@ sphinx-build -b html -D language=zh manual/ build/zhhtml
 
 然后点击Create Diff
 
-![image-20220806103541586](../../public/image/image-20220806103541586.png)
+![image-20220806103541586](https://dist.copur.xyz/image/image-20220806103541586-1669782219532-27.png)
 
 点击Continue
 
-![image-20220806103853651](../../public/image/image-20220806103853651.png)
+![image-20220806103853651](https://dist.copur.xyz/image/image-20220806103853651-1669782219532-28.png)
 
 Title为更改赋予标题
 
@@ -212,7 +212,7 @@ Tags选择Translations
 
 此外，也可以直接申请官方提交权限进行提交
 
-![image-20220806104242245](../../public/image/image-20220806104242245.png)
+![image-20220806104242245](https://dist.copur.xyz/image/image-20220806104242245-1669782219533-29.png)
 
 ## 后记
 

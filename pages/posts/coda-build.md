@@ -32,11 +32,11 @@ UI库： [electron](https://electronjs.org)
 2. 接着安装electron，因为我还不会使用electron-builder，而且为了减少项目文件夹体积，选择全局安装 `npm install electron -g` 
 3. 执行` md codemusic ; cd codemusic ; npm init`新建开发项目（现在在Windows环境下）
 
-![1.png](https://img13.360buyimg.com/ddimg/jfs/t1/135134/33/16034/66546/5fafc33eEbadef6c8/9331f90a7ba20fb8.png)
+![1.png](https://dist.copur.xyz/image/9331f90a7ba20fb8-1669782279054-64-1669785576277-8.png)
 
 4. 新建完`index.js`和`index.html`界面如图所示
 
-![1.png](https://img13.360buyimg.com/ddimg/jfs/t1/141925/5/14574/147088/5fafc755E5fd8c778/9dacdce40a1463eb.png)
+![1.png](https://dist.copur.xyz/image/9dacdce40a1463eb-1669782284625-67-1669785576277-9.png)
 
 5. 到此，一个基本的electron开发环境准备完成
 6. 另外，记得把`powershell`设置为`utf-8`参考[https://www.zhihu.com/question/54724102](https://www.zhihu.com/question/54724102)
@@ -83,7 +83,7 @@ body {
 
 在一通折腾后，总算参考[《html svg生成环形进度条的实现方法》](https://www.jb51.net/html5/694584.html)完成了
 
-![1.png](https://img10.360buyimg.com/ddimg/jfs/t1/122472/12/18581/140702/5fafd5c0Ed12d84af/78be7bf6bc99e683.png)
+![1.png](https://dist.copur.xyz/image/78be7bf6bc99e683-1669782289548-70-1669785576277-10.png)
 
 把[《html svg生成环形进度条的实现方法》](https://www.jb51.net/html5/694584.html)中的`js`控制代码改为
 
@@ -115,9 +115,9 @@ npm install tunnel --save
 
 首先以歌单详情和歌单url为例
 
-![ov30a.png](https://img.maocdn.cn/img/2020/11/28/ov30a.png)
+![ov30a.png](https://dist.copur.xyz/image/ov30a-1669785576276-1.png)
 
-![ovIKK.png](https://img.maocdn.cn/img/2020/11/28/ovIKK.png)
+![ovIKK.png](https://dist.copur.xyz/image/ovIKK-1669782332202-76-1669785576277-11.png)
 
 由官网给出的请求地址，再结合model下文件名可得
 
@@ -151,9 +151,9 @@ test()
 
 得到格式化出来的代码
 
-![oyM1N.png](https://img.maocdn.cn/img/2020/11/28/oyM1N.png)
+![oyM1N.png](https://dist.copur.xyz/image/oyM1N.png)
 
-![ovCwS.png](https://img.maocdn.cn/img/2020/11/28/ovCwS.png)
+![ovCwS.png](https://dist.copur.xyz/image/ovCwS-1669785576276-4.png)
 
 结合文档的描述，我们可以轻易看出，需要的歌曲ID数据应在`result.body.playlist.trackIds`中
 
@@ -266,7 +266,7 @@ console.log(result5.body)
 ```
 
 得返回结果
-![1c83703e58f81c42f.png](https://img.maocdn.cn/img/2020/11/28/1c83703e58f81c42f.png)]
+![1c83703e58f81c42f.png](https://dist.copur.xyz/image/1c83703e58f81c42f.png)]
 
 分析后发现是中文编码问题，因此将歌曲名作为base64编码
 
@@ -404,7 +404,7 @@ fs.writeFileSync('playlist.yaml', playlistStr, 'utf8');
 
 得到yaml文件
 
-![1.png](https://img.maocdn.cn/img/2020/12/06/1.png)
+![1.png](https://dist.copur.xyz/image/1.png)
 
 ### 前后端连接
 
