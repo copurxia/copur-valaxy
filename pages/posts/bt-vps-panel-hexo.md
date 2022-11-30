@@ -50,7 +50,7 @@ nvm use 14.4.0 #这句如果你只安装了一个node版本便是可以舍弃的
 
 这里之前的文章讨论过了，此处便不在累述
 
-[传送门](https://copur.xyz/post/hugo-github-to-hexo-gitlab/?t=1592659678976)
+[传送门](https://dist.copur.xyz/post/hugo-github-to-hexo-gitlab/?t=1592659678976)
 
 ## 安装hexo-myadmin
 

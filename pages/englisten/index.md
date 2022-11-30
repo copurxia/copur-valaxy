@@ -40,29 +40,29 @@ date: 2020-06-20 18:53:54
 
 1. 首先进行安装
 
-   ![1](https://copur.xyz/images/englisten-01.png)
+   ![1](https://dist.copur.xyz/images/englisten-01.png)
 
 2. 安装完成后进入软件
 
-   ![1](https://copur.xyz/images/englisten-02.png)
+   ![1](https://dist.copur.xyz/images/englisten-02.png)
 
 3. 进入设置界面进行微调
 
-   ![3](https://copur.xyz/images/englisten-03.png)
+   ![3](https://dist.copur.xyz/images/englisten-03.png)
 
 4. 点击导入选择音频文件
 
    细节确认中的音频是指可能会被作为段落的音频，该功能在后期将实现自动化
 
-   ![4](https://copur.xyz/images/englisten-04.png)
+   ![4](https://dist.copur.xyz/images/englisten-04.png)
 
 5. 等待结束
 
-   ![5](https://copur.xyz/images/englisten-05.png)
+   ![5](https://dist.copur.xyz/images/englisten-05.png)
 
 6. 回到主界面，点击刚刚解析的音频进行导出
 
-   ![6](https://copur.xyz/images/englisten-06.png)
+   ![6](https://dist.copur.xyz/images/englisten-06.png)
 
 7. 导出完成后会显示导出文件夹
 

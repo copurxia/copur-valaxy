@@ -75,11 +75,11 @@ body {
 
 ### 环形进度条
 
-进度条这东西也不是第一次做，详细可以参考我[之前的文章](https://copur.xyz/post/progressbar/)
+进度条这东西也不是第一次做，详细可以参考我[之前的文章](https://dist.copur.xyz/post/progressbar/)
 
 但是直线进度条变为环形似乎导致了大脑宕机，毕竟我的css知识极其薄弱
 
-于是一翻收藏夹，找回Ant Design里的进度条，又去掘金找了篇文章[《css3 制作圆环进度条》](https://juejin.im/post/6844903556164616205),以及简书的[《利用 clip-path 实现环形进度条》](https://www.jianshu.com/p/bc94380c4a22)，比较过后决定还是使用svg方案。毕竟使用环境为electron，而css实现又过于麻烦，尽管之前有做过[css大圆旋转](https://copur.xyz/englisten/)，但也正是因为以前做过，所以再也不想踩进这个坑了。
+于是一翻收藏夹，找回Ant Design里的进度条，又去掘金找了篇文章[《css3 制作圆环进度条》](https://juejin.im/post/6844903556164616205),以及简书的[《利用 clip-path 实现环形进度条》](https://www.jianshu.com/p/bc94380c4a22)，比较过后决定还是使用svg方案。毕竟使用环境为electron，而css实现又过于麻烦，尽管之前有做过[css大圆旋转](https://dist.copur.xyz/englisten/)，但也正是因为以前做过，所以再也不想踩进这个坑了。
 
 在一通折腾后，总算参考[《html svg生成环形进度条的实现方法》](https://www.jb51.net/html5/694584.html)完成了
 

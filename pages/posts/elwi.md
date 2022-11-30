@@ -21,7 +21,7 @@ categories: ["编程","edgeless"]
 
 运行后将要加载的插件包拖入弹出的终端窗口
 
-![img](https://copur.xyz/images/elwi.png)
+![img](https://dist.copur.xyz/images/elwi.png)
 
 若是第一次运行则会提示下载运行容器，建议输入1从直链服务器下载
 
