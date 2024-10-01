@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>乐得自在的小破站</title>
+        <link>https://copur.xyz/</link>
+        <description>闲来无事的小本本.</description>
+        <lastBuildDate>Tue, 01 Oct 2024 05:48:03 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>乐得自在的小破站</title>
+            <url>https://copur.xyz/image/avatar.webp</url>
+            <link>https://copur.xyz/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2024 © 乐得自在</copyright>
+        <atom:link href="https://copur.xyz/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[express的post跨域问题和前端原生js的post实现]]></title>
+            <link>https://copur.xyz/posts/js-post</link>
+            <guid>https://copur.xyz/posts/js-post</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这是post的js实现</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/js-post" target="_blank">https://copur.xyz/posts/js-post</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[基本组件系列——进度条]]></title>
+            <link>https://copur.xyz/posts/progressbar</link>
+            <guid>https://copur.xyz/posts/progressbar</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这个玩意只是对于ant design中<a href="https://ant.design/components/progress-cn/">进度条</a>的原生实现</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/progressbar" target="_blank">https://copur.xyz/posts/progressbar</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[远程桌面服务配置的部分记录]]></title>
+            <link>https://copur.xyz/posts/rdp-notes</link>
+            <guid>https://copur.xyz/posts/rdp-notes</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>远程桌面服务配置的部分记录</h1>
+<p>因工作学习需要，最近和室友合资购入了一台电脑，为便于使用进行rdp的配置</p>
+<h2>RDP补全升级</h2>
+<p>使用<a href="https://www.hankeer.org/article/superrdp2.html">SuperRDP2</a>对Windows版本进行补全</p>
+<p>同时后续的组策略相关内容，建议使用专业版</p>
+<p>原本参考使用的是<a href="https://github.com/stascorp/rdpwrap">RDPWrap</a>，但因为RDPWrap已经年久失修，且无法及时适配新版版本，使用面有限</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/rdp-notes" target="_blank">https://copur.xyz/posts/rdp-notes</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[rhino→blender流程的几种可能性]]></title>
+            <link>https://copur.xyz/posts/rhino2blender</link>
+            <guid>https://copur.xyz/posts/rhino2blender</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>由于专业需求会更多的走这个流程，故此研究</p>
+<p>当然由于两者的构建思维基本不同，最好的方案还是直接在blender内重建一次，倘若有动画之类的需求</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/rhino2blender" target="_blank">https://copur.xyz/posts/rhino2blender</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[局域网文件传输的方案解决]]></title>
+            <link>https://copur.xyz/posts/snap-drop</link>
+            <guid>https://copur.xyz/posts/snap-drop</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>局域网文件传输的方案解决</h1>
+<p>​		随着工作学习传输文件的需求日益加大以及无法承受高昂的云同步服务以及即时通讯软件文件传送速度的日益下滑，遂开始寻求更方便的文件传输方案，nas等方案由于成本过高，暂时舍弃</p>
+<h2>Huawei Share</h2>
+<p>​		不依赖与局域网（或者说会自动完成热点建立）</p>
+<p>​		目前个人最推荐的Windows文件传送方案，但由于其为品牌独有功能，不利于协作，所以需要其他的文件传送方案作为保底补充，同理舍弃的还有Airdrop。</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/snap-drop" target="_blank">https://copur.xyz/posts/snap-drop</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[学委的小惊喜]]></title>
+            <link>https://copur.xyz/posts/zjj</link>
+            <guid>https://copur.xyz/posts/zjj</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h4>行行好</h4>
+<p>朋友</p>
+<p>救救孩子</p>
+<p>双十一又到了</p>
+<p>在零点的那一刻</p>
+<p>在亮起手机屏幕的那一刻</p>
+<p>在打开天猫淘宝的那一刻</p>
+<p>心的狂跳</p>
+<p>手指的颤动</p>
+<p>全都随着购物车的清空而一扫而空</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/zjj" target="_blank">https://copur.xyz/posts/zjj</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[Edgeless暴力封装]]></title>
+            <link>https://copur.xyz/posts/033001</link>
+            <guid>https://copur.xyz/posts/033001</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>以前的一篇文章 <a href="https://www.kancloud.cn/cnotech/edgeless/1499994">Cno修饰版</a></p>
+<br/><p>访问 <a href="https://copur.xyz/posts/033001" target="_blank">https://copur.xyz/posts/033001</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[灰了？]]></title>
+            <link>https://copur.xyz/posts/040401</link>
+            <guid>https://copur.xyz/posts/040401</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p><code>转自xinda233.top</code></p>
+<p>2020年4月4日全国哀悼日，烈士走好</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/040401" target="_blank">https://copur.xyz/posts/040401</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[英语听力解析系统开发]]></title>
+            <link>https://copur.xyz/posts/040501</link>
+            <guid>https://copur.xyz/posts/040501</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>一个咕了挺久到现在才初见雏形的程序</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/040501" target="_blank">https://copur.xyz/posts/040501</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[Baidu-light-33主题]]></title>
+            <link>https://copur.xyz/posts/baidu-light</link>
+            <guid>https://copur.xyz/posts/baidu-light</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>这是什么</h2>
+<p>融合Baidu Lite 百度轻(改)+bilibili33娘，修复Baidu Lite 百度轻(改)首页及搜索页显示错误的问题的一个主题<br>
+本主题适用于怀念百度轻主题的人，只是<s>日常缝缝补补</s>平日只缝缝补补,，如果出现问题请在评论区回复，一般来说10天内会处理，背景图或自定义选项如有建议欢迎在评论区发布</p>
+<h2>为什么要有这个页面？</h2>
+<p>stylish的官方评论区实在太糟糕了，我自己都不想用。</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/baidu-light" target="_blank">https://copur.xyz/posts/baidu-light</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[blender中文翻译贡献教程]]></title>
+            <link>https://copur.xyz/posts/blender-doc-translation</link>
+            <guid>https://copur.xyz/posts/blender-doc-translation</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h1>blender中文翻译贡献教程</h1>
+<h2>前言</h2>
+<p>因为blender cn社区的老教程已经过时许久，可能会导致不少问题，故此写一份新的版本</p>
+<p>主要内容参考<a href="https://docs.blender.org/manual/zh-hans/3.4/contribute/index.html">blender docs</a>以及<a href="https://www.jianshu.com/p/b1a48105e05c">blender cn 老教程</a></p>
+<p>本教程主要针对Windows下，Mac&amp;Linux平台建议参考官方文档</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/blender-doc-translation" target="_blank">https://copur.xyz/posts/blender-doc-translation</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[edgeless for Linux食用手册]]></title>
+            <link>https://copur.xyz/posts/elwi</link>
+            <guid>https://copur.xyz/posts/elwi</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>完善的文档</h2>
+<p>首先声明，这不是PE，这是用于优化wine体验的玩意</p>
+<p>首先，因为这个是内测版应用，所以wine、7z、文泉驿和容器等依赖都未实现自动安装</p>
+<p>所以第一步当然就是安装wine 7z 文泉驿啦</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/elwi" target="_blank">https://copur.xyz/posts/elwi</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://copur.xyz/posts/hello-world</link>
+            <guid>https://copur.xyz/posts/hello-world</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>搬迁完成啦</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/hello-world" target="_blank">https://copur.xyz/posts/hello-world</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[Hello]]></title>
+            <link>https://copur.xyz/posts/hello</link>
+            <guid>https://copur.xyz/posts/hello</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>总算重建成功了</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/hello" target="_blank">https://copur.xyz/posts/hello</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[从Hugo+github迁移到hexo+gitlab]]></title>
+            <link>https://copur.xyz/posts/hugo-github-to-hexo-gitlab</link>
+            <guid>https://copur.xyz/posts/hugo-github-to-hexo-gitlab</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<p>因为GitHub那边SEO问题老是难以解决，而且每次构建再上传的过程特别繁琐，因此就从github迁移到了gitlab。</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/hugo-github-to-hexo-gitlab" target="_blank">https://copur.xyz/posts/hugo-github-to-hexo-gitlab</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[基本组件系列——数字输入框]]></title>
+            <link>https://copur.xyz/posts/inputnum</link>
+            <guid>https://copur.xyz/posts/inputnum</guid>
+            <pubDate>Tue, 01 Oct 2024 05:47:02 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>写在前面</h2>
+<p>这个系列只是用于记录自己过去写过的代码，避免自己重复做无用功</p>
+<h3>这个是什么</h3>
+<p>这个玩意只是对于ant design中<a href="https://ant.design/components/input-number-cn/">数字输入框</a>的原生实现</p>
+<p>由于采用了flex布局，导致兼容性可能有所下降</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/inputnum" target="_blank">https://copur.xyz/posts/inputnum</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[从零开始制作一个音乐播放器]]></title>
+            <link>https://copur.xyz/posts/coda-build</link>
+            <guid>https://copur.xyz/posts/coda-build</guid>
+            <pubDate>Sat, 14 Nov 2020 18:20:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>起因</h2>
+<p>关于为啥要做这个音乐播放器。这有好多原因，最重要的自然是因为想听歌，但是网易官方的客户端在播放的时候用着不顺手，另外，感觉官方的客户端功能对我来说实在太多功能了，许多功能我实际上是用不到的，于是想动手开始写一个合自己心意的播放器。其次<a href="https://xinda233.top/">@xinda</a>的inn项目给了我很多启发，因此动笔开工。</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/coda-build" target="_blank">https://copur.xyz/posts/coda-build</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+        <item>
+            <title><![CDATA[宝塔vps面板+hexo的网站搭建]]></title>
+            <link>https://copur.xyz/posts/bt-vps-panel-hexo</link>
+            <guid>https://copur.xyz/posts/bt-vps-panel-hexo</guid>
+            <pubDate>Sat, 20 Jun 2020 21:04:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>宝塔面板的安装</h2>
+<p>这一步相信挺多人其实都会，所以，这里就不累述了<br>
+<a href="https://www.bt.cn/bbs/thread-19376-1-1.html">传送门</a></p>
+<h2>安装nodejs</h2>
+<p>因为centos源里的nodejs版本太低了，经常会出问题，经过多次折腾后，我选择了nvm的方式</p>
+<p>当然了，nvm也是会更新的 请参考你看到这篇文章时的nvm官方安装</p>
+<br/><p>访问 <a href="https://copur.xyz/posts/bt-vps-panel-hexo" target="_blank">https://copur.xyz/posts/bt-vps-panel-hexo</a> 阅读全文。</p>]]></content:encoded>
+            <author>copur@qq.com (乐得自在)</author>
+        </item>
+    </channel>
+</rss>
