@@ -1,4 +1,9 @@
+# valaxy
+
+valaxy-fuse-list.json
+
 # vite-ssg
+
 .vite-ssg-dist
 .vite-ssg-temp
 
@@ -8,20 +13,20 @@ temp/
 *.local
 dist
 dist-ssr
+node_modules
 .idea/
+*.log
 
 components.d.ts
 
-Thumbs.db
+# valaxy fuse
+public/valaxy-fuse-list.json
 
-# lock
-yarn.lock
-package-lock.json
-pnpm-global/
+# valaxy rss
+public/feed.xml
 
-# dev
-node_modules/
-*.log
+# valaxy rss
+public/atom.xml
 
-# hexo
-db.json
+# valaxy rss
+public/feed.json

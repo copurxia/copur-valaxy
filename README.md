@@ -1,6 +1,6 @@
 # create-valaxy
 
-Example: [valaxy.yyj.moe](https://valaxy.yyj.moe)
+Example: [valaxy.site](https://valaxy.site)
 
 ## Usage
 
@@ -23,6 +23,12 @@ Modify `valaxy.config.ts` to custom your blog.
 English & Chinese Docs is coming!
 
 > Wait a minute.
+
+### Docker
+
+```bash
+docker build . -t your-valaxy-blog-name:latest
+```
 
 ## Structure
 
